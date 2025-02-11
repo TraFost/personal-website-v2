@@ -188,7 +188,6 @@ export default {
 				"Managed projects effectively even when requirements changed",
 				"Participated in code reviews and provided feedback to other developers",
 				"Fixed bugs and issues in a timely manner",
-				"Worked on multiple projects simultaneously and met deadlines",
 			],
 		},
 		{
