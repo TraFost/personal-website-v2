@@ -1,17 +1,35 @@
 @import "tailwindcss";
 
 @theme {
-    --breakpoint-xs: 425px;
+	--breakpoint-xs: 425px;
 }
 
 @layer base {
-    * {
-        @apply scroll-smooth;
-    }
+	* {
+		@apply scroll-smooth;
+	}
 }
 
 @layer utilities {
-    .gradient-text {
-        @apply bg-linear-to-r from-gray-200 to-gray-400 text-transparent bg-clip-text;
-    }
+	.gradient-text {
+		@apply bg-linear-to-r from-gray-200 to-gray-400 text-transparent bg-clip-text;
+	}
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+li {
+	display: flex;
+	align-items: flex-start;
+}
+
+li span {
+	flex-shrink: 0;
+}
+
+li p {
+	margin: 0;
 }

@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Section from '$components/Section.svelte';
-  import config from '$lib/config';
+  import Section from "$components/Section.svelte";
+  import config from "$lib/config";
 </script>
 
 <Section id="technologies" title="Technologies I Work With">

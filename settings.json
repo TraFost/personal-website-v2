@@ -1,0 +1,4 @@
+// settings.json
+{
+  "prettier.documentSelectors": ["**/*.svelte"]
+}

@@ -1,20 +1,26 @@
 <script lang="ts">
   import config from '$lib/config';
+  import GradualSpacing from "$lib/ui/GradualSpacing.svelte";
+  import BlurInText from "$lib/ui/BlurInText.svelte";
 </script>
 
 <section class="mt-64 flex flex-col items-start gap-y-2">
-  <h1 class="text-3xl xs:text-4xl sm:text-5xl font-bold">
-      <span class="gradient-text">
-        Hello, I'm {config.name}
-      </span>
-    👋
+  <h1>
+    <GradualSpacing
+    words="Who's {config.name}?"
+    class="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold gradient-text"
+    />
   </h1>
-  <h2 class="text-lg font-semibold text-white/60">
-    {config.profession}
+  <h2>
+    <GradualSpacing
+     words="A {config.profession}"
+     class="text-sm sm:text-lg md:text-xl font-semibold text-white/60"
+    />
   </h2>
-  <p class="text-gray-400 max-w-2xl">
-    {config.about}
-  </p>
+  <BlurInText
+    word={config.about}
+    class="max-w-full md:max-w-2xl text-gray-400 text-sm sm:text-base"
+  />
 
   <a
     href="mailto:{config.contactEmail}"
