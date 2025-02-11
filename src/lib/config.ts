@@ -124,7 +124,7 @@ export default {
 			title: "Implant Hospital Website",
 			description:
 				"A web application for a Korean hospital, managing patients, doctors, and appointments.",
-			thumbnail: "https://i.postimg.cc/yDk7wWTB/showcase-1.webp",
+			thumbnail: "https://i.postimg.cc/zGk3HgbL/showcase-1.webp",
 			tags: ["Next.js", "Typescript", "TailwindCSS", "Redux"],
 			isPrivate: true,
 		},
