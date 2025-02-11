@@ -24,13 +24,13 @@
               perPage: 2,
               arrows: false,
               drag: true,
-              pagination: true,
+              pagination: false,
           },
           640: {
               perPage: 1,
               drag: true,
               arrows: false,
-              pagination: true,
+              pagination: false,
           },
       },
   };
