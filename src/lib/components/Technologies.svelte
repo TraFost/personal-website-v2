@@ -3,7 +3,7 @@
   import config from "$lib/config";
 </script>
 
-<Section id="technologies" title="Technologies I Work With">
+<Section id="technologies" title="Technologies">
   <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl">
     {#each config.technologies as tech}
       <div
