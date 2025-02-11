@@ -25,7 +25,7 @@ export default {
 		{
 			title: "Honcho Dashboard",
 			description: `Honcho Dashboard is a web application that allows users to manage their account, albums, and view their photos. It also allows users to share their albums with others.`,
-			thumbnail: "/src/assets/project-showcase/showcase-6.webp",
+			thumbnail: "https://i.postimg.cc/QMxCQd1f/showcase-4.webp",
 			tags: [
 				"Typescript",
 				"Material-UI",
@@ -44,7 +44,7 @@ export default {
 		{
 			title: "Honcho Public",
 			description: `Honcho public is a real-time event photo platform that lets users view and download photos from events. It features a live slideshow, live album, real-time photo uploads, and analytics.`,
-			thumbnail: "/src/assets/project-showcase/showcase-5.webp",
+			thumbnail: "https://i.postimg.cc/d1h0fNWd/showcase-5.webp",
 			tags: [
 				"Typescript",
 				"Material-UI",
@@ -64,7 +64,7 @@ export default {
 			title: "Admin Panel Caffeine",
 			description:
 				"An admin panel for managing the Caffeine mobile application. Features include user management, content management, product management, and analytics.",
-			thumbnail: "/src/assets/project-showcase/showcase-1.webp",
+			thumbnail: "https://i.postimg.cc/zGk3HgbL/showcase-1.webp",
 			tags: [
 				"Typescript",
 				"TailwindCSS",
@@ -79,7 +79,7 @@ export default {
 			title: "KTA Buya Pasaman Timur",
 			description:
 				"A digital membership card mobile application for the East Pasaman Buya Members. Features include event registration, digital card, and member profile management.",
-			thumbnail: "/src/assets/project-showcase/showcase-4.webp",
+			thumbnail: "https://i.postimg.cc/QMxCQd1f/showcase-4.webp",
 			tags: ["React Native", "Typescript", "Zustand"],
 			url: "https://play.google.com/store/apps/details?id=com.bpt_app&hl=en_US&pli=1",
 			isPrivate: false,
@@ -88,7 +88,7 @@ export default {
 			title: "SickGPT",
 			description:
 				"A health assistant web application utilizing ChatGPT API to provide answers to health-related questions. Users can choose from different assistant personas for customized responses.",
-			thumbnail: "/src/assets/project-showcase/showcase-3.webp",
+			thumbnail: "https://i.postimg.cc/HxFL10KN/showcase-3.webp",
 			tags: ["React.js", "Typescript", "TailwindCSS", "Zustand", "OpenAI API"],
 			url: "https://sickgpt.io/",
 			isPrivate: false,
@@ -97,7 +97,7 @@ export default {
 			title: "Urban Threads",
 			description:
 				"Urban-Threads is a Web application that displays products and allows users to add items to their cart and complete a purchase. Users can also add their own products via a dashboard.",
-			thumbnail: "/src/assets/project-showcase/showcase-6.webp",
+			thumbnail: "https://i.postimg.cc/D0sw-vJ3w/showcase-6.webp",
 			tags: ["Javascript", "TailwindCSS", "React.js", "Redux", "Pocketbase"],
 			url: "https://urban-threads.vercel.app/",
 			repository: "https://github.com/TraFost/UrbanThreads",
@@ -107,7 +107,7 @@ export default {
 			title: "Admin Panel My-Buckit",
 			description:
 				"A Content Management System for My-Bucket web application. Manages all the content on the website, including user data, user-generated content, and blog posts.",
-			thumbnail: "/src/assets/project-showcase/showcase-2.webp",
+			thumbnail: "https://i.postimg.cc/Pq3x2nMT/showcase-2.webp",
 			tags: ["Typescript", "TailwindCSS", "React.js", "Zustand"],
 
 			isPrivate: true,
@@ -116,7 +116,7 @@ export default {
 			title: "Implant Hospital Mobile",
 			description:
 				"A mobile application for a Korean organization, allowing users to book doctor appointments.",
-			thumbnail: "/src/assets/project-showcase/showcase-5.webp",
+			thumbnail: "https://i.postimg.cc/d1h0fNWd/showcase-5.webp",
 			tags: ["React.js", "Typescript", "Redux"],
 			isPrivate: true,
 		},
@@ -124,7 +124,7 @@ export default {
 			title: "Implant Hospital Website",
 			description:
 				"A web application for a Korean hospital, managing patients, doctors, and appointments.",
-			thumbnail: "/src/assets/project-showcase/showcase-1.webp",
+			thumbnail: "https://i.postimg.cc/yDk7wWTB/showcase-1.webp",
 			tags: ["Next.js", "Typescript", "TailwindCSS", "Redux"],
 			isPrivate: true,
 		},
@@ -132,7 +132,7 @@ export default {
 			title: "Implant Patient Website",
 			description:
 				"A web application for managing patients in the Implant Hospital.",
-			thumbnail: "/src/assets/project-showcase/showcase-2.webp",
+			thumbnail: "https://i.postimg.cc/Pq3x2nMT/showcase-2.webp",
 			tags: ["JavaScript", "TailwindCSS", "React.js", "Redux"],
 			isPrivate: true,
 		},
@@ -140,7 +140,7 @@ export default {
 			title: "Implant Patient Mobile",
 			description:
 				"A mobile application for a Korean organization, allowing patients to book doctor appointments.",
-			thumbnail: "/src/assets/project-showcase/showcase-3.webp",
+			thumbnail: "https://i.postimg.cc/HxFL10KN/showcase-3.webp",
 			tags: ["React.js", "Typescript", "Redux"],
 			isPrivate: true,
 		},
@@ -148,7 +148,7 @@ export default {
 			title: "Personal Blog",
 			description:
 				"My personal blog where I write about my experiences and share my knowledge.",
-			thumbnail: "/src/assets/project-showcase/showcase-6.webp",
+			thumbnail: "https://i.postimg.cc/D0sw-vJ3w/showcase-6.webp",
 			tags: ["Next.js", "Typescript", "TailwindCSS"],
 			isPrivate: false,
 			url: "https://yapping-archive.vercel.app/",
