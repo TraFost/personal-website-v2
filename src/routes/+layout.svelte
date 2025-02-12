@@ -14,6 +14,7 @@
     <meta name="og:description" content={config.meta.description}/>
     <meta name="twitter:description" content={config.meta.description}/>
     <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" href={config.meta.favicon}>
   </svelte:head>
   
