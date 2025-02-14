@@ -2,6 +2,7 @@
     import '$lib/styles/app.css';
   
     import Footer from '$components/Footer.svelte';
+    import NavigationBar from '$lib/ui/NavigationBar.svelte';
     import config from '$lib/config';
   
     const { children } = $props();
@@ -21,9 +22,9 @@
   </svelte:head>
   
   <div class="min-h-[100dvh] bg-black text-white overflow-hidden">
+    <NavigationBar/>
     <main class="container mx-auto px-6 space-y-20">
       {@render children()}
     </main>
-  
     <Footer/>
   </div>

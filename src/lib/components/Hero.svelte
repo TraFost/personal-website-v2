@@ -4,7 +4,7 @@
   import BlurInText from "$lib/ui/BlurInText.svelte";
 </script>
 
-<section class="mt-64 flex flex-col items-start gap-y-2">
+<section class="mt-64 flex flex-col items-start gap-y-2" id='hero'>
   <h1>
     <GradualSpacing
     words="Who's {config.name}?"
