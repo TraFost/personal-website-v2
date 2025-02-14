@@ -22,7 +22,7 @@
   </svelte:head>
   
   <div class="min-h-[100dvh] bg-black text-white overflow-hidden">
-    <NavigationBar/>
+    <!-- <NavigationBar/> -->
     <main class="container mx-auto px-6 space-y-20">
       {@render children()}
     </main>
