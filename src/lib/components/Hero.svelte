@@ -1,31 +1,62 @@
 <script lang="ts">
-  import config from '$lib/config';
+  import config from "$lib/config";
   import GradualSpacing from "$lib/ui/GradualSpacing.svelte";
   import BlurInText from "$lib/ui/BlurInText.svelte";
+
+  let expanded = false;
+  const about = config.about.trim();
+
+  const needsToggle = about.length > 160;
 </script>
 
-<section class="mt-64 flex flex-col items-start gap-y-2" id='hero'>
-  <h1>
-    <GradualSpacing
-    words="Who's {config.name}?"
-    class="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold gradient-text"
-    />
-  </h1>
-  <h2>
-    <GradualSpacing
-     words="A {config.profession}"
-     class="text-sm sm:text-lg md:text-xl font-semibold text-white/60"
-    />
-  </h2>
-  <BlurInText
-    word={config.about}
-    class="max-w-full md:max-w-2xl text-gray-400 text-sm sm:text-base"
-  />
+<section id="hero" class="relative mt-40 md:mt-56">
+  <div class="relative flex flex-col items-start gap-y-4">
+    <div class="pill">
+      Based in {config.location}
+    </div>
 
-  <a
-    href="mailto:{config.contactEmail}"
-    class="px-7 py-3 text-sm bg-white/10 hover:bg-white/20 duration-150 rounded-lg mt-1"
-  >
-    Contact Me
-  </a>
+    <h1 class="leading-tight">
+      <GradualSpacing
+        words={`Hi, I am ${config.name}`}
+        class="text-[var(--text-hero)] font-bold gradient-text"
+      />
+    </h1>
+
+    <h2 class="text-subtle text-[clamp(1.1rem,2.4vw,1.4rem)]">
+      <GradualSpacing
+        words={`${config.profession}`}
+        class="font-semibold"
+      />
+    </h2>
+
+    <div class="text-gray-400 max-w-full md:max-w-2xl">
+      <BlurInText
+        word={about}
+        class={`text-sm sm:text-base transition-[max-height] duration-300 ease-in-out ${
+          expanded
+            ? ''
+            : '[display:-webkit-box] [-webkit-line-clamp:4] [-webkit-box-orient:vertical] overflow-hidden'
+        }`}
+      />
+      {#if needsToggle}
+        <button
+          type="button"
+          class="mt-2 inline-block text-meta underline underline-offset-4 hover:opacity-80 focus-ring hover:cursor-pointer"
+          on:click={() => (expanded = !expanded)}
+          aria-expanded={expanded}
+        >
+          {expanded ? 'Show less' : 'Read more'}
+        </button>
+      {/if}
+    </div>
+
+    <div class="mt-2 flex flex-wrap items-center gap-3">
+      <a
+        href={`mailto:${config.contactEmail}`}
+        class="btn-base btn-ghost focus-ring"
+      >
+        Contact me
+      </a>
+    </div>
+  </div>
 </section>

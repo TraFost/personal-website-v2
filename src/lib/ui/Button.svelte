@@ -6,22 +6,62 @@ import {
     cn
 } from "$lib/utils";
 
+type ButtonVariant = "primary" | "ghost";
+
 type ButtonProps = {
-    children: Snippet
-    onClick: VoidFunction
-    disabled?: boolean
-    className?: string
+    children: Snippet;
+    onClick?: VoidFunction;
+    disabled?: boolean;
+    className?: string;
+    type?: "button" | "submit" | "reset";
+    variant?: ButtonVariant;
+    href?: string;
+    external?: boolean;
+    ariaLabel?: string;
 };
 
-let {children, onClick, disabled, className}: ButtonProps = $props();
+let {
+    children,
+    onClick,
+    disabled = false,
+    className,
+    type = "button",
+    variant = "primary",
+    href,
+    external = false,
+    ariaLabel
+}: ButtonProps = $props();
+
+const getClasses = () =>
+    cn(
+        "btn-base",
+        variant === "primary" ? "btn-primary" : "btn-ghost",
+        disabled && "opacity-50 cursor-not-allowed",
+        className
+    );
 </script>
 
-<button
-    disabled={disabled}
-onclick={onClick}
-    class={cn("p-2 bg-white/10 hover:bg-white/20 duration-150 rounded-lg mt-1 cursor-pointer", {
-        "opacity-50 cursor-not-allowed": disabled
-    }, className)}
+{#if href}
+    <a
+        href={disabled ? undefined : href}
+        rel={external ? "noreferrer noopener" : undefined}
+        target={external ? "_blank" : undefined}
+        class={getClasses()}
+        aria-disabled={disabled}
+        aria-label={ariaLabel}
+        data-variant={variant}
     >
-    {@render children()}
-</button>
+        {@render children()}
+    </a>
+{:else}
+    <button
+        disabled={disabled}
+        type={type}
+        onclick={onClick}
+        data-variant={variant}
+        class={getClasses()}
+        aria-label={ariaLabel}
+    >
+        {@render children()}
+    </button>
+{/if}

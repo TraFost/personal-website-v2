@@ -3,23 +3,42 @@
     import Section from "$components/Section.svelte";
 </script>
 
-<Section id="experiences" title="Experiences">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-full">
+<Section
+    id="experiences"
+    title="Experience"
+>
+    <ol class="relative space-y-10 border-l border-white/10 pl-8" aria-label="Professional experience timeline">
         {#each config.experiences as experience (experience.title)}
-        <div class="p-6 rounded-2xl bg-white/[0.08] border border-white/10 shadow-lg hover:shadow-xl transition-shadow">
-            <h3 class="text-xl font-bold text-white">{experience.title}</h3>
-            <p class="text-gray-400 text-sm">{experience.company}</p>
-            <p class="text-gray-500 text-xs">{experience.duration}</p>
-
-            <ul class="mt-4 space-y-3 text-gray-300">
-                {#each experience.responsibilities as responsibility}
-                <li class="flex items-start space-x-3">
-                    <span class="size-2 bg-gray-400 rounded-full mt-1"></span>
-                    <p class="leading-relaxed">{responsibility}</p> 
-                </li>
-                {/each}
-            </ul>
-        </div>
+            <li class="relative pl-6">
+                <div class="grid gap-3">
+                    <div class="flex flex-wrap items-baseline justify-between gap-3">
+                        <div>
+                            <h3 class="text-lg font-semibold text-white">
+                                {experience.title}
+                            </h3>
+                            <p class="text-sm text-white/60">
+                                {experience.company}
+                            </p>
+                        </div>
+                        <div class="flex flex-col items-end gap-1 text-right text-meta">
+                            <span>{experience.duration}</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-white/70">
+                        {experience.description}
+                    </p>
+                    <ul class="space-y-2 text-sm text-white/75" aria-label={`Key outcomes at ${experience.company}`}>
+                        {#each experience.responsibilities as responsibility}
+                            <li class="flex gap-3">
+                                <span class="mt-2 h-[2px] w-6 bg-white/25"></span>
+                                <p class="leading-relaxed">
+                                    {responsibility}
+                                </p>
+                            </li>
+                        {/each}
+                    </ul>
+                </div>
+            </li>
         {/each}
-    </div>
+    </ol>
 </Section>

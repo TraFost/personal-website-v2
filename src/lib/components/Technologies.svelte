@@ -20,7 +20,7 @@
 </script>
 
 <Section id="technologies" title="Technologies">
-  <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl">
+  <div class="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-5xl">
     {#each config.technologies as tech}
       <div
         class="flex justify-start items-center px-3 py-2 bg-linear-to-r from-white/[0.095] to-white/5 border border-white/5 hover:border-white/10 rounded-xl"

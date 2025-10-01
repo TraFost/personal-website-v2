@@ -10,9 +10,11 @@
   let { id, title, children }: SectionProps = $props();
 </script>
 
-<section {id}>
-  <h2 class="text-2xl font-bold mb-4 gradient-text">
-    {title}
-  </h2>
+<section {id} class="scroll-mt-24">
+  <header class="mb-8 space-y-3">
+    <h2 class="section-heading">
+      {title}
+    </h2>
+  </header>
   {@render children()}
 </section>
