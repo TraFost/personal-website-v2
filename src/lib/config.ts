@@ -3,17 +3,17 @@ import { formatDateRange } from "./utils";
 export default {
 	name: "Rahman Nurudin",
 	about: `
-    Someone who loves turning code into smooth, interactive experiences. I build websites and dynamic mobile apps using React, Next.js, Typescript, and React Native. 
-    I’m all about clean code, pixel-perfect designs, and solving tricky bugs (sometimes even on purpose—just for fun). Always curious, always learning, and always up for the next challenge.
-    When I’m not coding, you’ll find me chasing down new tech trends, tinkering with side projects, or pretending that debugging is my cardio.  
-  `,
+	I’m a full stack developer who focuses on building products that actually work at scale. My work spans frontend, backend, and cloud, from designing APIs with NestJS and PostgreSQL to creating responsive web and mobile apps with React and Next.js.
+	I’ve delivered platforms with real-time chat, scheduling systems, background job queues, and automation that save teams hours every week. What drives me is making things reliable, fast, and easy for people to use.
+	Outside of client work, I push myself through side projects and hackathons, experimenting with AI and new technologies to sharpen my skills and keep moving forward.
+	`,
 	location: "Jakarta, Indonesia",
-	profession: "Frontend Developer",
+	profession: "Full Stack Developer",
 	contactEmail: "contact@rahmannurudin29@gmail.com",
 	meta: {
-		title: "Rahman Nurudin",
+		title: "Rahman Nurudin | Full Stack Developer",
 		description:
-			"Frontend Developer | React, Next.js, React Native, Typescript",
+			"Full Stack Developer | React, Next.js, NestJS, PostgreSQL, Redis",
 		favicon: "https://avatars.githubusercontent.com/u/93178373?size=64",
 	},
 	social: {
@@ -22,6 +22,31 @@ export default {
 		instagram: "rahmannrdn",
 	},
 	projects: [
+		{
+			title: "Ruang Diri",
+			description:
+				"Full-stack counseling platform with real-time chat, scheduling, and automation for mental wellness services.",
+			thumbnail: "https://i.postimg.cc/HxFL10KN/showcase-3.webp",
+			tags: [
+				"NestJS",
+				"TypeScript",
+				"PostgreSQL",
+				"Drizzle ORM",
+				"Redis",
+				"BullMQ",
+				"Ably",
+				"React",
+			],
+			isPrivate: true,
+		},
+		{
+			title: "BIMTranslator",
+			description:
+				"Hackathon project translating sign language gestures to text in real time using MediaPipe and React.",
+			thumbnail: "https://i.postimg.cc/D0sw-vJ3w/showcase-6.webp",
+			tags: ["React", "TypeScript", "MediaPipe", "Firebase"],
+			isPrivate: false,
+		},
 		{
 			title: "Honcho Dashboard",
 			description: `Honcho Dashboard is a web application that allows users to manage their account, albums, and view their photos. It also allows users to share their albums with others.`,
@@ -87,7 +112,7 @@ export default {
 		{
 			title: "SickGPT",
 			description:
-				"A health assistant web application utilizing ChatGPT API to provide answers to health-related questions. Users can choose from different assistant personas for customized responses.",
+				"A health assistant web application utilizing OpenAI API to provide answers to health-related questions. Users can choose from different assistant personas for customized responses.",
 			thumbnail: "https://i.postimg.cc/HxFL10KN/showcase-3.webp",
 			tags: ["React.js", "Typescript", "TailwindCSS", "Zustand", "OpenAI API"],
 			url: "https://sickgpt.io/",
@@ -109,7 +134,6 @@ export default {
 				"A Content Management System for My-Bucket web application. Manages all the content on the website, including user data, user-generated content, and blog posts.",
 			thumbnail: "https://i.postimg.cc/Pq3x2nMT/showcase-2.webp",
 			tags: ["Typescript", "TailwindCSS", "React.js", "Zustand"],
-
 			isPrivate: true,
 		},
 		{
@@ -154,40 +178,66 @@ export default {
 			url: "https://yapping-archive.vercel.app/",
 		},
 	],
-
-	// Tech icons are fetched from https://github.com/devicons/devicon
 	technologies: [
-		{ name: "Typescript", slug: "typescript" },
+		{
+			name: "Typescript",
+			slug: "typescript",
+		},
 		{ name: "Javascript", slug: "javascript" },
 		{ name: "React", slug: "react" },
 		{ name: "React Native", slug: "react" },
 		{ name: "Next.js", slug: "nextjs" },
-		{ name: "Vue.js", slug: "vuejs" },
-		{ name: "Rx.js", slug: "rxjs" },
-		{ name: "Svelte", slug: "svelte" },
+		{ name: "NestJS", slug: "nestjs" },
+		{ name: "Node.js", slug: "nodejs" },
+		{ name: "Express", slug: "express" },
+		{ name: "PostgreSQL", slug: "postgresql" },
+		{ name: "Redis", slug: "redis" },
+		{ name: "Google Cloud", slug: "googlecloud" },
+		{
+			name: "AWS",
+			slug: "amazonwebservices",
+			extendedSlug: "amazonwebservices-original-wordmark",
+		},
 		{ name: "Docker", slug: "docker" },
-		{ name: "Vitest", slug: "vitest" },
-		{ name: "Tailwind", slug: "tailwindcss" },
-		{ name: "Redux", slug: "redux" },
 		{ name: "Firebase", slug: "firebase" },
 		{ name: "Socket.io", slug: "socketio" },
+		{ name: "Tailwind", slug: "tailwindcss" },
+		{ name: "Redux", slug: "redux" },
+		{ name: "Jest", slug: "jest", extendedSlug: "jest-plain" },
+		{ name: "Rx.js", slug: "rxjs" },
 		{ name: "Material-UI", slug: "materialui" },
 	],
 	experiences: [
 		{
+			title: "Fullstack Developer",
+			company: "PT. Wong Makmur Sejati",
+			year: "2025(April) - 2025(October)",
+			description:
+				"Scaling a counseling platform with secure APIs and real-time collaboration.",
+			duration: formatDateRange("2025-04-01", "2025-10-01"),
+			responsibilities: [
+				"Designed and deployed NestJS + PostgreSQL (Drizzle ORM) APIs serving 5,000+ monthly counseling and scheduling requests.",
+				"Built Ably-powered chat with presence, file sharing, unread tracking, and search to maintain sub-200ms latency across clients.",
+				"Automated Zoom onboarding and notifications with BullMQ + Redis, saving 10+ hours of manual coordination every week.",
+				"Orchestrated prioritized job queues with retry logic to process hundreds of daily tasks at 99% reliability.",
+				"Integrated Google Cloud Storage, Resend, and Puppeteer pipelines for file storage, transactional email, and PDF generation.",
+				"Collaborated across backend and frontend squads using Docker, GCP, and React to deliver scalable releases.",
+			],
+		},
+		{
 			title: "Frontend Web Developer",
 			company: "Ubersnap Pte. Ltd.",
-			year: "2024(November) - Present",
-			description: "Building web applications using Next.js",
-			duration: formatDateRange("2024-11-01", "Present"),
+			year: "2024(October) - 2025(April)",
+			description:
+				"Shipped high-performing marketing experiences for a global photo platform.",
+			duration: formatDateRange("2024-10-01", "2025-04-01"),
 			responsibilities: [
-				"Maintained and improved existing web applications",
-				"Developed new features for web applications",
-				"Ensured websites look good and work well on all devices and browsers",
-				"Worked closely with designers and backend developers to ensure the best user experience",
-				"Managed projects effectively even when requirements changed",
-				"Participated in code reviews and provided feedback to other developers",
-				"Fixed bugs and issues in a timely manner",
+				"Delivered responsive features with optimistic updates, polling, and queuing for 1,000+ daily active users.",
+				"Boosted Lighthouse scores from the 70s to 90+, lifting organic traffic by 15%.",
+				"Optimized UI flows that increased user engagement by 25% across key funnels.",
+				"Expanded automated test coverage to cut post-release bugs by 30%.",
+				"Worked across three time zones to coordinate releases with product, design, and backend teams.",
+				"Ensured marketing sites and dashboards stayed accessible and performant across devices and browsers.",
 			],
 		},
 		{
@@ -195,47 +245,28 @@ export default {
 			company: "PT. Healstation Indonesia",
 			year: "2023(April) - 2024(October)",
 			description:
-				"Building web & mobile applications using React & React Native",
+				"Delivering healthcare, POS, and CMS products across web and mobile.",
 			duration: formatDateRange("2023-04-01", "2024-10-01"),
 			responsibilities: [
-				"Developed websites & apps for korean clients",
-				"Turned design mockups into functional web pages and applications",
-				"Ensured the best performance and user experience for web and mobile applications",
-				"Managed projects effectively even when requirements changed",
-				"Handled multiple projects simultaneously and met deadlines",
-				"Worked closely with designers and backend developers to ensure the best user experience",
-				"Choosed the best technology stack & libraries for each project based on requirements",
-			],
-		},
-		{
-			title: "Frontend Web Developer (Freelance)",
-			company: "Freelance",
-			year: "2023(January) - 2023(March)",
-			description: "Building web application using React",
-			duration: formatDateRange("2023-01-01", "2023-03-01"),
-			responsibilities: [
-				"Developed website for my instructor in Harisenin",
-				"Turned design mockups into functional web pages",
-				"Ensured websites look good and work well on all devices",
-				"Took part in reviewing the codebase of the project",
-				"Learned how to work with a team",
-				"Learned how to participate in a project from scratch",
-				"Learned how to manage my time effectively",
-				"Learned how to communicate with the team",
-				"Learned how to work with libraries, APIs, and frameworks",
+				"Shipped 7+ production healthcare, POS, and CMS apps reaching 5,000+ end users.",
+				"Built shared React, Next.js, and React Native codebases to cut duplicate logic by 40%.",
+				"Implemented Socket.io and Firebase real-time updates, reducing POS order delays by 60%.",
+				"Ensured 95%+ cross-device compatibility and high accessibility scores across platforms.",
+				"Worked closely with designers and backend developers to ensure the best user experience.",
+				"Handled multiple concurrent projects while keeping delivery on schedule and scope.",
 			],
 		},
 	],
 	educations: [
 		{
-			title: "Undergraduate Degree (Last Semester)",
+			title: "B.Sc. Informatics Engineering (GPA 3.70/4.0)",
 			school: "Universitas Muhammadiyah Tangerang",
-			year: "2021 - Present",
+			year: "2021 - 2025",
 		},
 		{
 			title: "English First (EF)",
 			school: "EF",
-			year: "2024 - Present",
+			year: "2024 - 2025",
 		},
 		{
 			title: "Fullstack Bootcamp Developer",
