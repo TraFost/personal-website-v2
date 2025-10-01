@@ -21,10 +21,12 @@
     <meta name="twitter:description" content={config.meta.description} />
   </svelte:head>
   
-  <div class="min-h-[100dvh] bg-black text-white overflow-hidden">
-    <!-- <NavigationBar/> -->
-    <main class="container mx-auto px-6 space-y-20">
+  <div class="min-h-screen bg-black text-white">
+    <nav class="sticky top-4 z-50" aria-label="Primary">
+      <NavigationBar />
+    </nav>
+    <main class="mx-auto w-full max-w-[76rem] px-5 sm:px-6 lg:px-10 xl:px-0 space-y-[var(--space-9)]" data-sveltekit-preload-data="hover">
       {@render children()}
     </main>
-    <Footer/>
+    <Footer />
   </div>

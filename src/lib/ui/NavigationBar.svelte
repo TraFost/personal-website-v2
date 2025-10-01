@@ -14,7 +14,7 @@
       { name: "Educations", link: "educations" }
     ];
   
-    let navTranslate = -200;
+    let navTranslate = -120;
     let idleTimeout: number;
   
     const handleScroll = () => {
@@ -76,41 +76,48 @@
         history.pushState(null, "", `#${sectionId}`);
       }
     }
-  </script>
-  
-  <Motion
-    animate={{ transform: `translateY(${navTranslate}px)` }}
-    transition={{ type: "spring", stiffness: 400, damping: 30 }}
-    let:motion
-  >
-    <div use:motion class="fixed top-0 left-0 right-0 z-50 pt-6 w-full">
-      <ul
-        on:mouseleave={() => {
-          opacity = 0;
-        }}
-        class="relative mx-auto flex w-fit rounded-lg border-2 bg-black p-1"
-      >
-        {#each navs as item}
-          <li
-            use:positionMotion
-            class="relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference md:px-5 md:py-3 md:text-base"
-          >
-            <a
-              href={`#${item.link}`}
-              on:click={(e) => onNavClick(e, item.link)}
-            >
-              {item.name}
-            </a>
-          </li>
-        {/each}
-        <Motion
-          animate={{ left: left, width: width, opacity: opacity }}
-          transition={{ type: "spring", stiffness: 400, damping: 30 }}
-          let:motion
+</script>
+
+<Motion
+  animate={{ transform: `translateY(${navTranslate}px)` }}
+  transition={{ type: "spring", stiffness: 400, damping: 30 }}
+  let:motion
+>
+  <nav use:motion class="mx-auto max-w-2xl px-4">
+    <ul
+      role="list"
+      aria-label="Section navigation"
+      on:mouseleave={() => { opacity = 0; }}
+      class="relative mx-auto flex w-full justify-center gap-1.5 rounded-[var(--radius-xl)] border border-white/10 bg-neutral-900/70 px-1.5 py-1.5 shadow-[var(--shadow-soft)] backdrop-blur-md supports-backdrop-blur:backdrop-saturate-150"
+    >
+      {#each navs as item}
+        <li
+          use:positionMotion
+          class="relative z-10 block cursor-pointer rounded-[calc(var(--radius-md)-2px)] px-3 py-2 text-[11px] font-medium tracking-wide text-neutral-200 transition-colors hover:text-white focus-visible:text-white md:px-5 md:py-3 md:text-sm uppercase"
         >
-          <li use:motion class="absolute z-0 h-7 rounded-lg bg-white md:h-12"></li>
-        </Motion>
-      </ul>
-    </div>
-  </Motion>
-  
+          <a
+            href={`#${item.link}`}
+            on:click={(e) => onNavClick(e, item.link)}
+            class="outline-none ring-0 focus-visible:ring-2 focus-visible:ring-white/30 focus-visible:ring-offset-0"
+            data-sveltekit-preload-data="hover"
+          >
+            {item.name}
+          </a>
+        </li>
+      {/each}
+
+      <Motion
+        animate={{ left: left, width: width, opacity: opacity }}
+        transition={{ type: "spring", stiffness: 400, damping: 30 }}
+        let:motion
+      >
+        <li
+          use:motion
+          class="absolute z-0 h-8 md:h-11 rounded-[calc(var(--radius-md)-2px)] bg-gradient-to-r from-white/25 to-white/15 shadow-inner"
+        ></li>
+      </Motion>
+
+      <div class="pointer-events-none absolute inset-0 rounded-[var(--radius-md)] ring-1 ring-white/5"></div>
+    </ul>
+  </nav>
+</Motion>
