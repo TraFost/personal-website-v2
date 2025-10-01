@@ -7,9 +7,9 @@ export default {
 	I’ve delivered platforms with real-time chat, scheduling systems, background job queues, and automation that save teams hours every week. What drives me is making things reliable, fast, and easy for people to use.
 	Outside of client work, I push myself through side projects and hackathons, experimenting with AI and new technologies to sharpen my skills and keep moving forward.
 	`,
-	location: "Jakarta, Indonesia",
+	location: "Tangerang, Indonesia",
 	profession: "Full Stack Developer",
-	contactEmail: "contact@rahmannurudin29@gmail.com",
+	contactEmail: "rahwisdilfiqrak@gmail.com",
 	meta: {
 		title: "Rahman Nurudin | Full Stack Developer",
 		description:
@@ -25,7 +25,7 @@ export default {
 		{
 			title: "Ruang Diri",
 			description:
-				"Full-stack counseling platform with real-time chat, scheduling, and automation for mental wellness services.",
+				"Counseling platform with secure APIs, real-time chat, scheduling, and automation for mental health services.",
 			thumbnail: "https://i.postimg.cc/HxFL10KN/showcase-3.webp",
 			tags: [
 				"NestJS",
@@ -42,9 +42,18 @@ export default {
 		{
 			title: "BIMTranslator",
 			description:
-				"Hackathon project translating sign language gestures to text in real time using MediaPipe and React.",
+				"Hackathon project with in-browser translation of Malaysian Sign Language gestures to text, using MediaPipe hand landmarks, TensorFlow.js classification, phrase matching, and animation playback.",
 			thumbnail: "https://i.postimg.cc/D0sw-vJ3w/showcase-6.webp",
-			tags: ["React", "TypeScript", "MediaPipe", "Firebase"],
+			tags: [
+				"React",
+				"TypeScript",
+				"MediaPipe",
+				"TensorFlow.js",
+				"TailwindCSS",
+				"Framer Motion",
+			],
+			url: "https://bim-translator-l4md.vercel.app",
+			repository: "https://github.com/TraFost/bim-translator",
 			isPrivate: false,
 		},
 		{
@@ -211,49 +220,46 @@ export default {
 		{
 			title: "Fullstack Developer",
 			company: "PT. Wong Makmur Sejati",
-			year: "2025(April) - 2025(October)",
+			year: "April 2025 – October 2025 | South Jakarta, Indonesia",
 			description:
-				"Scaling a counseling platform with secure APIs and real-time collaboration.",
+				"Scaling a counseling platform with secure APIs and real-time collaboration for mental wellness teams.",
 			duration: formatDateRange("2025-04-01", "2025-10-01"),
 			responsibilities: [
-				"Designed and deployed NestJS + PostgreSQL (Drizzle ORM) APIs serving 5,000+ monthly counseling and scheduling requests.",
-				"Built Ably-powered chat with presence, file sharing, unread tracking, and search to maintain sub-200ms latency across clients.",
-				"Automated Zoom onboarding and notifications with BullMQ + Redis, saving 10+ hours of manual coordination every week.",
-				"Orchestrated prioritized job queues with retry logic to process hundreds of daily tasks at 99% reliability.",
-				"Integrated Google Cloud Storage, Resend, and Puppeteer pipelines for file storage, transactional email, and PDF generation.",
-				"Collaborated across backend and frontend squads using Docker, GCP, and React to deliver scalable releases.",
+				"Designed and deployed secure NestJS + PostgreSQL (Drizzle ORM) APIs serving 5,000+ monthly counseling and scheduling requests.",
+				"Built Ably-powered chat (presence, file sharing, unread tracking, search) supporting hundreds of active users daily while keeping message latency under 200ms.",
+				"Automated Zoom session setup and notifications with Bull + Redis, saving the team 10+ hours of manual coordination every week.",
+				"Developed prioritized Bull + Redis job queues with retry logic, processing hundreds of background tasks daily at 99% reliability.",
+				"Integrated Google Cloud Storage, Resend email delivery, and Puppeteer PDF generation to automate weekly reports and file operations.",
 			],
 		},
 		{
 			title: "Frontend Web Developer",
 			company: "Ubersnap Pte. Ltd.",
-			year: "2024(October) - 2025(April)",
+			year: "October 2024 – April 2025 | Singapore (Remote)",
 			description:
-				"Shipped high-performing marketing experiences for a global photo platform.",
+				"Shipped high-performing marketing and product experiences for a global photo platform.",
 			duration: formatDateRange("2024-10-01", "2025-04-01"),
 			responsibilities: [
-				"Delivered responsive features with optimistic updates, polling, and queuing for 1,000+ daily active users.",
-				"Boosted Lighthouse scores from the 70s to 90+, lifting organic traffic by 15%.",
-				"Optimized UI flows that increased user engagement by 25% across key funnels.",
-				"Expanded automated test coverage to cut post-release bugs by 30%.",
-				"Worked across three time zones to coordinate releases with product, design, and backend teams.",
-				"Ensured marketing sites and dashboards stayed accessible and performant across devices and browsers.",
+				"Implemented optimistic updates, polling, and queuing to keep complex dashboards responsive for 1,000+ daily active users.",
+				"Boosted Lighthouse scores from the 70s to 90+, driving a 15% lift in organic traffic.",
+				"Increased user engagement by 25% through targeted UI improvements and faster load times across web and mobile.",
+				"Partnered with design, backend, and QA teams across three time zones to ship features under shifting requirements.",
+				"Expanded unit and regression test coverage, cutting post-release bugs by 30% and improving long-term stability.",
 			],
 		},
 		{
 			title: "Frontend Developer (Web & Mobile)",
 			company: "PT. Healstation Indonesia",
-			year: "2023(April) - 2024(October)",
+			year: "April 2023 – October 2024 | Jakarta, Indonesia (Hybrid)",
 			description:
-				"Delivering healthcare, POS, and CMS products across web and mobile.",
+				"Delivering healthcare, POS, and CMS products across web and mobile for Korean clients.",
 			duration: formatDateRange("2023-04-01", "2024-10-01"),
 			responsibilities: [
-				"Shipped 7+ production healthcare, POS, and CMS apps reaching 5,000+ end users.",
-				"Built shared React, Next.js, and React Native codebases to cut duplicate logic by 40%.",
-				"Implemented Socket.io and Firebase real-time updates, reducing POS order delays by 60%.",
-				"Ensured 95%+ cross-device compatibility and high accessibility scores across platforms.",
-				"Worked closely with designers and backend developers to ensure the best user experience.",
-				"Handled multiple concurrent projects while keeping delivery on schedule and scope.",
+				"Delivered 7+ production apps across healthcare, POS, and CMS domains serving 5,000+ end users.",
+				"Built shared React, Next.js, and React Native codebases to accelerate delivery and cut duplicate logic by 40%.",
+				"Maintained 95%+ cross-device and browser compatibility to ensure consistent experiences.",
+				"Partnered with leadership to align delivery with business goals, reducing bottlenecks across squads.",
+				"Implemented Socket.io and Firebase real-time updates that reduced POS order delays by 60% and improved satisfaction.",
 			],
 		},
 	],
