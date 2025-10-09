@@ -2,11 +2,7 @@ import { formatDateRange } from "./utils";
 
 export default {
 	name: "Rahman Nurudin",
-	about: `
-	I’m a full stack developer who focuses on building products that actually work at scale. My work spans frontend, backend, and cloud, from designing APIs with NestJS and PostgreSQL to creating responsive web and mobile apps with React and Next.js.
-	I’ve delivered platforms with real-time chat, scheduling systems, background job queues, and automation that save teams hours every week. What drives me is making things reliable, fast, and easy for people to use.
-	Outside of client work, I push myself through side projects and hackathons, experimenting with AI and new technologies to sharpen my skills and keep moving forward.
-	`,
+	about: `I build web and mobile applications with React, Next.js, NestJS, and PostgreSQL. My work includes real time chat, scheduling, and automation tools that make products feel smooth and reliable. When I’m not shipping something new, I’m experimenting with AI, joining hackathons, or just tinkering to see what else I can make better.`,
 	location: "Tangerang, Indonesia",
 	profession: "Full Stack Developer",
 	contactEmail: "rahwisdilfiqrak@gmail.com",
