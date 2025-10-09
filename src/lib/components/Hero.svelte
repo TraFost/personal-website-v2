@@ -5,8 +5,6 @@
 
   let expanded = false;
   const about = config.about.trim();
-
-  const needsToggle = about.length > 160;
 </script>
 
 <section id="hero" class="relative mt-40 md:mt-56">
@@ -38,16 +36,6 @@
             : '[display:-webkit-box] [-webkit-line-clamp:4] [-webkit-box-orient:vertical] overflow-hidden'
         }`}
       />
-      {#if needsToggle}
-        <button
-          type="button"
-          class="mt-2 inline-block text-meta underline underline-offset-4 hover:opacity-80 focus-ring hover:cursor-pointer"
-          on:click={() => (expanded = !expanded)}
-          aria-expanded={expanded}
-        >
-          {expanded ? 'Show less' : 'Read more'}
-        </button>
-      {/if}
     </div>
 
     <div class="mt-2 flex flex-wrap items-center gap-3">
