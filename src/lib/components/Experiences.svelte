@@ -10,7 +10,7 @@
     <ol class="relative space-y-10 border-l border-white/10 pl-8" aria-label="Professional experience timeline">
         {#each config.experiences as experience (experience.title)}
             <li class="relative pl-6">
-                <div class="grid gap-3">
+                <div class="grid gap-3 w-full">
                     <div class="flex flex-wrap items-baseline justify-between gap-3">
                         <div>
                             <h3 class="text-lg font-semibold text-white">

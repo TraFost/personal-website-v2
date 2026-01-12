@@ -1,13 +1,20 @@
 import { formatDateRange } from "./utils";
 
+import marmaladeImg from "../assets/showcase/marmalade.webp";
+import loloImg from "../assets/showcase/lolo.webp";
+import orchestorImg from "../assets/showcase/orchestor.webp";
+import recessImg from "../assets/showcase/recess.webp";
+import poopoovilleImg from "../assets/showcase/poopooville.webp";
+import bimTranslatorImg from "../assets/showcase/bim-translator.webp";
+
 export default {
 	name: "Rahman Nurudin",
-	about: `I build web and mobile applications with React, Next.js, NestJS, and PostgreSQL. My work includes real time chat, scheduling, and automation tools that make products feel smooth and reliable. When I’m not shipping something new, I’m experimenting with AI, joining hackathons, or just tinkering to see what else I can make better.`,
+	about: `Building end-to-end production systems. I combine high-performance frontend engineering with backend architectures that hold under load, including chat platforms, background workers, AI pipelines, caching layers, and event-driven workflows.`,
 	location: "Tangerang, Indonesia",
-	profession: "Full Stack Developer",
+	profession: "Full Stack Engineer",
 	contactEmail: "rahwisdilfiqrak@gmail.com",
 	meta: {
-		title: "Rahman Nurudin | Full Stack Developer",
+		title: "Rahman Nurudin | Full Stack Engineer",
 		description:
 			"Full Stack Developer | React, Next.js, NestJS, PostgreSQL, Redis",
 		favicon: "https://avatars.githubusercontent.com/u/93178373?size=64",
@@ -20,13 +27,17 @@ export default {
 	projects: [
 		{
 			title: "Ruang Diri",
-			description:
-				"Counseling platform with secure APIs, real-time chat, scheduling, and automation for mental health services.",
+			description: `Professional counseling platform with real-time chat, session automation, file uploads, and search. Modular backend supports multiple roles and B2B deployments with strict access control and real-time delivery.`,
 			thumbnail: "https://i.postimg.cc/HxFL10KN/showcase-3.webp",
 			tags: [
 				"NestJS",
 				"TypeScript",
 				"PostgreSQL",
+				"Google Cloud Run",
+				"Google Cloud Storage",
+				"Resend",
+				"Zoom API",
+				"Socket.io",
 				"Drizzle ORM",
 				"Redis",
 				"BullMQ",
@@ -36,10 +47,97 @@ export default {
 			isPrivate: true,
 		},
 		{
+			title: "Marmalade – Voice-First Emotional Companion",
+			description: `Real-time voice AI companion delivering safe, clinically aligned emotional support. Built a speculative execution pipeline, custom OpenAI-compatible interface, and contextual memory engine for low-latency, stateful interactions.`,
+			thumbnail: marmaladeImg,
+			tags: [
+				"React",
+				"Hono",
+				"Google Cloud Run",
+				"PostgreSQL",
+				"Text-Embedding-005",
+				"Drizzle ORM",
+				"Vertex AI",
+				"ElevenLabs",
+				"ElevenLabs Conversational Agents",
+				"Pulumi",
+				"Gemini 2.5 Flash",
+				"Gemini 2.5 Pro",
+			],
+			url: "https://devpost.com/software/marmalade-lq2rd1?ref_content=my-projects-tab&ref_feature=my_projects",
+			repository: "https://github.com/TraFost/Marmalade",
+		},
+		{
+			title: "LoLo – AI League Coach",
+			description: `Serverless AI companion converting raw LoL match data into coaching insights. Managed full-stack Turbo Monorepo, JSON-only architecture, graceful degradation, and social card generation for low-latency, reliable guidance.`,
+			thumbnail: loloImg,
+			tags: [
+				"React",
+				"TypeScript",
+				"Hono",
+				"AWS Lambda",
+				"SST",
+				"Amazon Bedrock",
+				"AWS S3",
+				"TanStack Query",
+				"Tailwind",
+				"ShadCN",
+			],
+			url: "https://devpost.com/software/helfer?ref_content=my-projects-tab&ref_feature=my_projects",
+			repository: "https://github.com/TraFost/LoLo",
+		},
+		{
+			title: "Orchestor – Agentic Social Media Scheduler",
+			description: `AI system transforming Asana tasks into validated schedules and repost suggestions. Built backend, integrated IBM watsonx Orchestrate, and ensured stable, machine-readable JSON output.`,
+			thumbnail: orchestorImg,
+			tags: [
+				"React",
+				"Hono",
+				"Cloudflare Workers",
+				"TypeScript",
+				"IBM watsonx Orchestrate",
+			],
+			url: "https://lablab.ai/event/agentic-ai-hackathon-ibm-watsonx-orchestrate/agentbunnies/orchestor",
+			repository: "https://github.com/TraFost/orchestor-be",
+		},
+		{
+			title: "Recess – Production Platform",
+			description: `Role-based production management platform for quoting, project planning, collaboration, and staged payouts. Built RLS-first PostgreSQL schemas, audit logs, multi-step approvals, and secure file uploads via Supabase Edge Functions to Wasabi.`,
+			thumbnail: recessImg,
+			tags: [
+				"React",
+				"Supabase",
+				"PostgreSQL",
+				"Edge Functions",
+				"Wasabi",
+				"RLS",
+				"Real-time Collaboration",
+			],
+			isPrivate: true,
+		},
+		{
+			title: "Poopooville – Web3 Ecosystem",
+			description: `Multi-chain dApp on Ethereum & BSC supporting NFT minting, token sales, and vesting/claim flows. Integrated wallet connections via Wagmi, Viem, and Reown AppKit, maintaining sync across frontend, backend, and on-chain state.`,
+			thumbnail: poopoovilleImg,
+			tags: [
+				"React",
+				"Vite",
+				"Ethereum",
+				"BSC",
+				"Wagmi",
+				"Viem",
+				"Reown AppKit",
+				"Web3",
+				"NFT",
+				"Token Sale",
+			],
+			isPrivate: true,
+		},
+		{
 			title: "BIMTranslator",
 			description:
 				"Hackathon project with in-browser translation of Malaysian Sign Language gestures to text, using MediaPipe hand landmarks, TensorFlow.js classification, phrase matching, and animation playback.",
-			thumbnail: "https://i.postimg.cc/D0sw-vJ3w/showcase-6.webp",
+			thumbnail: bimTranslatorImg,
 			tags: [
 				"React",
 				"TypeScript",
@@ -91,21 +189,6 @@ export default {
 			isPrivate: true,
 		},
 		{
-			title: "Admin Panel Caffeine",
-			description:
-				"An admin panel for managing the Caffeine mobile application. Features include user management, content management, product management, and analytics.",
-			thumbnail: "https://i.postimg.cc/zGk3HgbL/showcase-1.webp",
-			tags: [
-				"Typescript",
-				"TailwindCSS",
-				"Firebase",
-				"Next.js",
-				"Redux",
-				"Socket.io",
-			],
-			isPrivate: true,
-		},
-		{
 			title: "KTA Buya Pasaman Timur",
 			description:
 				"A digital membership card mobile application for the East Pasaman Buya Members. Features include event registration, digital card, and member profile management.",
@@ -113,74 +196,6 @@ export default {
 			tags: ["React Native", "Typescript", "Zustand"],
 			url: "https://play.google.com/store/apps/details?id=com.bpt_app&hl=en_US&pli=1",
 			isPrivate: false,
-		},
-		{
-			title: "SickGPT",
-			description:
-				"A health assistant web application utilizing OpenAI API to provide answers to health-related questions. Users can choose from different assistant personas for customized responses.",
-			thumbnail: "https://i.postimg.cc/HxFL10KN/showcase-3.webp",
-			tags: ["React.js", "Typescript", "TailwindCSS", "Zustand", "OpenAI API"],
-			url: "https://sickgpt.io/",
-			isPrivate: false,
-		},
-		{
-			title: "Urban Threads",
-			description:
-				"Urban-Threads is a Web application that displays products and allows users to add items to their cart and complete a purchase. Users can also add their own products via a dashboard.",
-			thumbnail: "https://i.postimg.cc/D0sw-vJ3w/showcase-6.webp",
-			tags: ["Javascript", "TailwindCSS", "React.js", "Redux", "Pocketbase"],
-			url: "https://urban-threads.vercel.app/",
-			repository: "https://github.com/TraFost/UrbanThreads",
-			isPrivate: false,
-		},
-		{
-			title: "Admin Panel My-Buckit",
-			description:
-				"A Content Management System for My-Bucket web application. Manages all the content on the website, including user data, user-generated content, and blog posts.",
-			thumbnail: "https://i.postimg.cc/Pq3x2nMT/showcase-2.webp",
-			tags: ["Typescript", "TailwindCSS", "React.js", "Zustand"],
-			isPrivate: true,
-		},
-		{
-			title: "Implant Hospital Mobile",
-			description:
-				"A mobile application for a Korean organization, allowing users to book doctor appointments.",
-			thumbnail: "https://i.postimg.cc/d1h0fNWd/showcase-5.webp",
-			tags: ["React.js", "Typescript", "Redux"],
-			isPrivate: true,
-		},
-		{
-			title: "Implant Hospital Website",
-			description:
-				"A web application for a Korean hospital, managing patients, doctors, and appointments.",
-			thumbnail: "https://i.postimg.cc/zGk3HgbL/showcase-1.webp",
-			tags: ["Next.js", "Typescript", "TailwindCSS", "Redux"],
-			isPrivate: true,
-		},
-		{
-			title: "Implant Patient Website",
-			description:
-				"A web application for managing patients in the Implant Hospital.",
-			thumbnail: "https://i.postimg.cc/Pq3x2nMT/showcase-2.webp",
-			tags: ["JavaScript", "TailwindCSS", "React.js", "Redux"],
-			isPrivate: true,
-		},
-		{
-			title: "Implant Patient Mobile",
-			description:
-				"A mobile application for a Korean organization, allowing patients to book doctor appointments.",
-			thumbnail: "https://i.postimg.cc/HxFL10KN/showcase-3.webp",
-			tags: ["React.js", "Typescript", "Redux"],
-			isPrivate: true,
-		},
-		{
-			title: "Personal Blog",
-			description:
-				"My personal blog where I write about my experiences and share my knowledge.",
-			thumbnail: "https://i.postimg.cc/D0sw-vJ3w/showcase-6.webp",
-			tags: ["Next.js", "Typescript", "TailwindCSS"],
-			isPrivate: false,
-			url: "https://yapping-archive.vercel.app/",
 		},
 	],
 	technologies: [
@@ -214,18 +229,34 @@ export default {
 	],
 	experiences: [
 		{
+			title: "Fullstack Engineer (Independent / Contract)",
+			company: "Recess & Poopooville",
+			year: "November 2025 – Present | Remote",
+			description:
+				"Built a role-based production platform for project management, quoting, collaboration, and staged payouts, and contributed to a multi-chain Web3 ecosystem with NFTs, token sales, and on-chain interactions.",
+			duration: formatDateRange("2025-11-01", "Present"),
+			responsibilities: [
+				"Built a role-based production management platform on Supabase for quoting, project planning, real-time collaboration, and staged payouts.",
+				"Designed RLS-first PostgreSQL schemas with multi-step approvals, audit logs, and role-scoped access.",
+				"Implemented secure file uploads via Supabase Edge Functions, proxying to Wasabi with signed URL caching.",
+				"Contributed to frontend and Web3 integrations for a multi-chain dApp (Ethereum & BSC), including NFT minting, token sales, and vesting/claim flows.",
+				"Integrated wallet connections using Wagmi, Viem, and Reown AppKit across multiple networks.",
+				"Maintained and optimized a large React/Vite codebase with synchronized on-chain, backend, and UI state.",
+			],
+		},
+		{
 			title: "Fullstack Developer",
 			company: "PT. Wong Makmur Sejati",
-			year: "April 2025 – October 2025 | South Jakarta, Indonesia",
+			year: "April 2025 – November 2025 | South Jakarta, Indonesia",
 			description:
 				"Scaling a counseling platform with secure APIs and real-time collaboration for mental wellness teams.",
-			duration: formatDateRange("2025-04-01", "2025-10-01"),
+			duration: formatDateRange("2025-04-01", "2025-11-01"),
 			responsibilities: [
 				"Designed and deployed secure NestJS + PostgreSQL (Drizzle ORM) APIs serving 5,000+ monthly counseling and scheduling requests.",
 				"Built Ably-powered chat (presence, file sharing, unread tracking, search) supporting hundreds of active users daily while keeping message latency under 200ms.",
 				"Automated Zoom session setup and notifications with Bull + Redis, saving the team 10+ hours of manual coordination every week.",
 				"Developed prioritized Bull + Redis job queues with retry logic, processing hundreds of background tasks daily at 99% reliability.",
-				"Integrated Google Cloud Storage, Resend email delivery, and Puppeteer PDF generation to automate weekly reports and file operations.",
+				"Integrated Google Cloud Storage, Resend email delivery, and Puppeteer PDF generation to create reports and file operations.",
 			],
 		},
 		{
@@ -234,7 +265,7 @@ export default {
 			year: "October 2024 – April 2025 | Singapore (Remote)",
 			description:
 				"Shipped high-performing marketing and product experiences for a global photo platform.",
-			duration: formatDateRange("2024-10-01", "2025-04-01"),
+			duration: formatDateRange("2024-10-01", "2025-04-10"),
 			responsibilities: [
 				"Implemented optimistic updates, polling, and queuing to keep complex dashboards responsive for 1,000+ daily active users.",
 				"Boosted Lighthouse scores from the 70s to 90+, driving a 15% lift in organic traffic.",
