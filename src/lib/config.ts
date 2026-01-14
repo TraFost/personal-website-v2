@@ -6,6 +6,7 @@ import orchestorImg from "../assets/showcase/orchestor.webp";
 import recessImg from "../assets/showcase/recess.webp";
 import poopoovilleImg from "../assets/showcase/poopooville.webp";
 import bimTranslatorImg from "../assets/showcase/bim-translator.webp";
+import ruangdiriImg from "../assets/showcase/ruangdiri.webp";
 
 export default {
 	name: "Rahman Nurudin",
@@ -28,7 +29,7 @@ export default {
 		{
 			title: "Ruang Diri",
 			description: `Professional counseling platform with real-time chat, session automation, file uploads, and search. Modular backend supports multiple roles and B2B deployments with strict access control and real-time delivery.`,
-			thumbnail: "https://i.postimg.cc/HxFL10KN/showcase-3.webp",
+			thumbnail: ruangdiriImg,
 			tags: [
 				"NestJS",
 				"TypeScript",
