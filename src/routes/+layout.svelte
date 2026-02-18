@@ -15,8 +15,8 @@
     <link rel="icon" href={config.meta.favicon} />
     <meta property="og:title" content={config.meta.title} />
     <meta property="og:description" content={config.meta.description} />
-    <meta property="og:image" content="https://example.com/your-image.jpg" />
-    <meta property="og:url" content="https://rmnnrdn.vercel.app" />
+    <meta property="og:image" content={config.meta.image} />
+    <meta property="og:url" content={config.meta.url} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:description" content={config.meta.description} />
   </svelte:head>
