@@ -10,6 +10,7 @@
   
   <svelte:head>
     <title>{config.meta.title}</title>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="bfb4571f-5b89-45f8-a3c5-381b8fc759cb"></script>
     <meta name="description" content={config.meta.description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="icon" href={config.meta.favicon} />

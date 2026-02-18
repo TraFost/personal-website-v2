@@ -19,6 +19,8 @@ export default {
 		description:
 			"Full Stack Developer | React, Next.js, NestJS, PostgreSQL, Redis",
 		favicon: "https://avatars.githubusercontent.com/u/93178373?size=64",
+		image: "https://avatars.githubusercontent.com/u/93178373?size=256",
+		url: "https://rmnnrdn.vercel.app",
 	},
 	social: {
 		github: "TraFost",
