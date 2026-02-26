@@ -24,9 +24,7 @@
 		"vite": "^6.0.11"
 	},
 	"dependencies": {
-		"@splidejs/svelte-splide": "^0.2.9",
 		"clsx": "^2.1.1",
-		"lucide-svelte": "^0.473.0",
 		"svelte-motion": "^0.12.2",
 		"tailwind-merge": "^3.0.1"
 	}

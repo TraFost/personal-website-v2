@@ -8,15 +8,9 @@ importers:
 
   .:
     dependencies:
-      '@splidejs/svelte-splide':
-        specifier: ^0.2.9
-        version: 0.2.9
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
-      lucide-svelte:
-        specifier: ^0.473.0
-        version: 0.473.0(svelte@5.19.9)
       svelte-motion:
         specifier: ^0.12.2
         version: 0.12.2(svelte@5.19.9)
@@ -357,12 +351,6 @@ packages:
     resolution: {integrity: sha512-5Zch+aAarrWQaWEtjdb/jlaT5Q2H4Lt6pCl8utvrkKGGlXfAWd2yjzho75E1nxdbsS9F2q+5ipewlbrtmGYB8Q==}
     peerDependencies:
       tailwindcss: ^4.0.0
-
-  '@splidejs/splide@4.1.4':
-    resolution: {integrity: sha512-5I30evTJcAJQXt6vJ26g2xEkG+l1nXcpEw4xpKh0/FWQ8ozmAeTbtniVtVmz2sH1Es3vgfC4SS8B2X4o5JMptA==}
-
-  '@splidejs/svelte-splide@0.2.9':
-    resolution: {integrity: sha512-04ekJnDIJKEAhklKQMhkg4Yx0Ihtkk18eA9JeHPON0lDTngQxlOYdEYTJWH2UON45VxmVqoLHv04I++JphO36w==}
 
   '@sveltejs/adapter-auto@4.0.0':
     resolution: {integrity: sha512-kmuYSQdD2AwThymQF0haQhM8rE5rhutQXG4LNbnbShwhMO4qQGnKaaTy+88DuNSuoQDi58+thpq8XpHc1+oEKQ==}
@@ -814,11 +802,6 @@ packages:
   locate-character@3.0.0:
     resolution: {integrity: sha512-SW13ws7BjaeJ6p7Q6CO2nchbYEc3X3J6WrmTTDto7yMPqVSZTUyY5Tjbid+Ab8gLnATtygYtiDIJGQRRn2ZOiA==}
 
-  lucide-svelte@0.473.0:
-    resolution: {integrity: sha512-Lw2+vrDmVlz/WC1/KcuCEV/1ENrHtChw4GH1cssMbbpdUFyVjZkt9S+7olCOGW8jOZJOrzZNfefV1DdaDw46jQ==}
-    peerDependencies:
-      svelte: ^3 || ^4 || ^5.0.0-next.42
-
   magic-string@0.30.17:
     resolution: {integrity: sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==}
 
@@ -1204,12 +1187,6 @@ snapshots:
   '@skeletonlabs/skeleton@4.12.0(tailwindcss@4.0.4)':
     dependencies:
       tailwindcss: 4.0.4
-
-  '@splidejs/splide@4.1.4': {}
-
-  '@splidejs/svelte-splide@0.2.9':
-    dependencies:
-      '@splidejs/splide': 4.1.4
 
   '@sveltejs/adapter-auto@4.0.0(@sveltejs/kit@2.17.1(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.19.9)(vite@6.1.0(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.38.2)))(svelte@5.19.9)(vite@6.1.0(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.38.2)))':
     dependencies:
@@ -1806,10 +1783,6 @@ snapshots:
       lightningcss-win32-x64-msvc: 1.29.1
 
   locate-character@3.0.0: {}
-
-  lucide-svelte@0.473.0(svelte@5.19.9):
-    dependencies:
-      svelte: 5.19.9
 
   magic-string@0.30.17:
     dependencies:

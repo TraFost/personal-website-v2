@@ -28,7 +28,7 @@
 
 	head,
 	body {
-		@apply bg-surface-50 dark:bg-surface-900 text-surface-950 dark:text-surface-50 scroll-smooth;
+		@apply bg-white scroll-smooth;
 		font-family: 'Inter', sans-serif;
 		-webkit-font-smoothing: antialiased;
 	}
@@ -73,7 +73,7 @@
 	}
 
 	.section-heading {
-		@apply text-[clamp(1.75rem,4vw,2.5rem)] font-semibold bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400;
+		@apply text-[clamp(1.75rem,4vw,2.5rem)] font-semibold text-primary-500;
 	}
 
 	.focus-ring:focus-visible {
@@ -84,17 +84,17 @@
 
 @layer utilities {
 	.gradient-text {
-		@apply bg-gradient-to-r from-white via-slate-200 to-slate-400 text-transparent bg-clip-text;
+		@apply bg-gradient-to-r from-primary-500 to-tertiary-500 text-transparent bg-clip-text;
 	}
 
 	.text-subtle {
-		@apply text-white/70;
+		@apply text-surface-600 dark:text-surface-400;
 	}
 
 	.text-meta {
 		font-size: var(--text-meta);
 		line-height: 1.6;
-		color: rgba(255, 255, 255, 0.6);
+		@apply text-surface-500 dark:text-surface-400;
 	}
 
 	.btn-base {
