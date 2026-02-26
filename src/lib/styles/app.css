@@ -1,11 +1,22 @@
 @import "tailwindcss";
 
+@import '@skeletonlabs/skeleton'; 
+@import '@skeletonlabs/skeleton-svelte';
+
+@import './theme.css';
+
 @theme {
 	--breakpoint-xs: 425px;
 }
 
 @layer base {
 	:root {
+		--color-1: #DBDFE5;
+		--color-2: #161F3C;
+		--color-3: #5D5E65;
+		--color-4: #8297A3;
+		--color-5: #757472;
+		--color-6: #3AA4B4;
 		--space-3: 0.75rem;
 		--space-5: 1.25rem;
 		--space-7: 1.75rem;
