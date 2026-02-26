@@ -19,7 +19,7 @@
     };
 </script>
 
-<section class="max-w-5xl mx-auto px-6 mb-32">
+<section id="skills" class="max-w-5xl mx-auto px-6 mb-32">
     <div class="flex flex-col md:flex-row md:items-center gap-6 mb-10">
         <div class="flex items-center gap-3 text-surface-950 dark:text-surface-50">
             <h2 class="section-heading">Skills &amp; Tools</h2>

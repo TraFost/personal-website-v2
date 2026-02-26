@@ -89,7 +89,7 @@
     </div>
 {/snippet}
 
-<section class="max-w-5xl mx-auto px-6 mb-32 space-y-24">
+<section id="projects" class="max-w-5xl mx-auto px-6 mb-32 space-y-24">
     {#each projectSections as section}
         <div>
             <div class="flex items-center gap-4 mb-10">

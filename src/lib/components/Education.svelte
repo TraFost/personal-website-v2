@@ -32,7 +32,7 @@
     }
 </script>
 
-<section class="max-w-5xl mx-auto px-6 mb-32 relative">
+<section id="education" class="max-w-5xl mx-auto px-6 mb-32 relative">
     <div class="flex items-center gap-4 mb-16">
         <h2 class="section-heading">Education</h2>
         <SectionArrow {arrowId} class="h-6 w-auto opacity-70" />

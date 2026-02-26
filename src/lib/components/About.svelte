@@ -5,7 +5,7 @@
     const arrowId = 1;
 </script>
 
-<section class="max-w-5xl mx-auto px-6 mb-32">
+<section id="about" class="max-w-5xl mx-auto px-6 mb-32">
     <div class="flex items-center justify-center gap-4 mb-16">
         <h2 class="section-heading">Bit more About Me</h2>
         <SectionArrow {arrowId} class="w-auto h-6" />
