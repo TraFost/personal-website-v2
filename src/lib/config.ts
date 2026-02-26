@@ -10,21 +10,21 @@ import ruangdiriImg from "../assets/showcase/ruangdiri.webp";
 
 export default {
 	name: "Rahman Nurudin",
-	about: `Building end-to-end production systems. I combine high-performance frontend engineering with backend architectures that hold under load, including chat platforms, background workers, AI pipelines, caching layers, and event-driven workflows.`,
+	about: `I build end-to-end production web applications, from user-facing interfaces to backend services and database design. My work spans scalable APIs, real-time features, background processing, and AI-powered workflows. I focus on writing clean, maintainable code and delivering systems that remain reliable under real-world use.`,
 	location: "Tangerang, Indonesia",
 	profession: "Full Stack Engineer",
-	contactEmail: "rahwisdilfiqrak@gmail.com",
+	contactEmail: "rahmannurudin29@gmail.com",
 	meta: {
-		title: "Rahman Nurudin | Full Stack Engineer",
-		description:
-			"Full Stack Developer | React, Next.js, NestJS, PostgreSQL, Redis",
-		favicon: "https://avatars.githubusercontent.com/u/93178373?size=64",
-		image: "https://avatars.githubusercontent.com/u/93178373?size=256",
-		url: "https://rmnnrdn.vercel.app",
-	},
+	  title: "Rahman Nurudin | Fullstack Engineer",
+	  description:
+	  	"Fullstack Engineer building production web applications and AI-integrated systems with React, TypeScript, Node.js, and PostgreSQL.",
+	  favicon: "https://avatars.githubusercontent.com/u/93178373?size=64",
+	  image: "https://avatars.githubusercontent.com/u/93178373?size=256",
+	  url: "https://rmnnrdn.vercel.app",
+},
 	social: {
 		github: "TraFost",
-		discord: "rahmannrdn",
+		discord: "rahman_1121",
 		instagram: "rahmannrdn",
 	},
 	projects: [
@@ -154,44 +154,6 @@ export default {
 			isPrivate: false,
 		},
 		{
-			title: "Honcho Dashboard",
-			description: `Honcho Dashboard is a web application that allows users to manage their account, albums, and view their photos. It also allows users to share their albums with others.`,
-			thumbnail: "https://i.postimg.cc/QMxCQd1f/showcase-4.webp",
-			tags: [
-				"Typescript",
-				"Material-UI",
-				"Next.js",
-				"React Query",
-				"Rx.js",
-				"Firebase",
-				"Jotai",
-				"Websockets",
-				"AWS",
-				"Docker",
-			],
-			url: "https://dashboard.thehoncho.app/login",
-			isPrivate: true,
-		},
-		{
-			title: "Honcho Public",
-			description: `Honcho public is a real-time event photo platform that lets users view and download photos from events. It features a live slideshow, live album, real-time photo uploads, and analytics.`,
-			thumbnail: "https://i.postimg.cc/d1h0fNWd/showcase-5.webp",
-			tags: [
-				"Typescript",
-				"Material-UI",
-				"Next.js",
-				"React Query",
-				"Rx.js",
-				"Firebase",
-				"Jotai",
-				"Websockets",
-				"AWS",
-				"Docker",
-			],
-			url: "https://public.thehoncho.app/album/671dfade6f172a4857be19e6?type=all",
-			isPrivate: true,
-		},
-		{
 			title: "KTA Buya Pasaman Timur",
 			description:
 				"A digital membership card mobile application for the East Pasaman Buya Members. Features include event registration, digital card, and member profile management.",
@@ -231,67 +193,63 @@ export default {
 		{ name: "Material-UI", slug: "materialui" },
 	],
 	experiences: [
-		{
-			title: "Fullstack Engineer (Independent / Contract)",
-			company: "Recess & Poopooville",
-			year: "November 2025 – Present | Remote",
-			description:
-				"Built a role-based production platform for project management, quoting, collaboration, and staged payouts, and contributed to a multi-chain Web3 ecosystem with NFTs, token sales, and on-chain interactions.",
-			duration: formatDateRange("2025-11-01", "Present"),
-			responsibilities: [
-				"Built a role-based production management platform on Supabase for quoting, project planning, real-time collaboration, and staged payouts.",
-				"Designed RLS-first PostgreSQL schemas with multi-step approvals, audit logs, and role-scoped access.",
-				"Implemented secure file uploads via Supabase Edge Functions, proxying to Wasabi with signed URL caching.",
-				"Contributed to frontend and Web3 integrations for a multi-chain dApp (Ethereum & BSC), including NFT minting, token sales, and vesting/claim flows.",
-				"Integrated wallet connections using Wagmi, Viem, and Reown AppKit across multiple networks.",
-				"Maintained and optimized a large React/Vite codebase with synchronized on-chain, backend, and UI state.",
-			],
-		},
-		{
-			title: "Fullstack Developer",
-			company: "PT. Wong Makmur Sejati",
-			year: "April 2025 – November 2025 | South Jakarta, Indonesia",
-			description:
-				"Scaling a counseling platform with secure APIs and real-time collaboration for mental wellness teams.",
-			duration: formatDateRange("2025-04-01", "2025-11-01"),
-			responsibilities: [
-				"Designed and deployed secure NestJS + PostgreSQL (Drizzle ORM) APIs serving 5,000+ monthly counseling and scheduling requests.",
-				"Built Ably-powered chat (presence, file sharing, unread tracking, search) supporting hundreds of active users daily while keeping message latency under 200ms.",
-				"Automated Zoom session setup and notifications with Bull + Redis, saving the team 10+ hours of manual coordination every week.",
-				"Developed prioritized Bull + Redis job queues with retry logic, processing hundreds of background tasks daily at 99% reliability.",
-				"Integrated Google Cloud Storage, Resend email delivery, and Puppeteer PDF generation to create reports and file operations.",
-			],
-		},
-		{
-			title: "Frontend Web Developer",
-			company: "Ubersnap Pte. Ltd.",
-			year: "October 2024 – April 2025 | Singapore (Remote)",
-			description:
-				"Shipped high-performing marketing and product experiences for a global photo platform.",
-			duration: formatDateRange("2024-10-01", "2025-04-10"),
-			responsibilities: [
-				"Implemented optimistic updates, polling, and queuing to keep complex dashboards responsive for 1,000+ daily active users.",
-				"Boosted Lighthouse scores from the 70s to 90+, driving a 15% lift in organic traffic.",
-				"Increased user engagement by 25% through targeted UI improvements and faster load times across web and mobile.",
-				"Partnered with design, backend, and QA teams across three time zones to ship features under shifting requirements.",
-				"Expanded unit and regression test coverage, cutting post-release bugs by 30% and improving long-term stability.",
-			],
-		},
-		{
-			title: "Frontend Developer (Web & Mobile)",
-			company: "PT. Healstation Indonesia",
-			year: "April 2023 – October 2024 | Jakarta, Indonesia (Hybrid)",
-			description:
-				"Delivering healthcare, POS, and CMS products across web and mobile for Korean clients.",
-			duration: formatDateRange("2023-04-01", "2024-10-01"),
-			responsibilities: [
-				"Delivered 7+ production apps across healthcare, POS, and CMS domains serving 5,000+ end users.",
-				"Built shared React, Next.js, and React Native codebases to accelerate delivery and cut duplicate logic by 40%.",
-				"Maintained 95%+ cross-device and browser compatibility to ensure consistent experiences.",
-				"Partnered with leadership to align delivery with business goals, reducing bottlenecks across squads.",
-				"Implemented Socket.io and Firebase real-time updates that reduced POS order delays by 60% and improved satisfaction.",
-			],
-		},
+	  {
+	  	title: "Fullstack Engineer (Independent / Contract)",
+	  	company: "Recess & Poopooville",
+	  	year: "November 2025 – Present | Tangerang (Remote)",
+	  	description:
+	  		"Building production web platforms and contributing to multi-chain Web3 applications across backend, frontend, and on-chain integrations.",
+	  	duration: formatDateRange("2025-11-01", "Present"),
+	  	responsibilities: [
+	  		"Built a role-based production management platform supporting quoting, approvals, collaboration, and staged payouts.",
+	  		"Designed RLS-first PostgreSQL schemas with multi-step approval flows, audit logging, and strict role-scoped access.",
+	  		"Implemented secure file handling via Edge Functions with signed URL proxying and controlled storage access.",
+	  		"Contributed to multi-chain dApp features (Ethereum & BSC), including NFT minting, token sales, and vesting/claim flows.",
+	  		"Maintained and optimized a large React codebase synchronizing on-chain, backend, and UI state.",
+	  	],
+	  },
+	  {
+	  	title: "Fullstack Developer",
+	  	company: "PT. Wong Makmur Sejati",
+	  	year: "April 2025 – November 2025 | South Jakarta, Indonesia",
+	  	description:
+	  		"Scaled a counseling and scheduling platform with secure APIs, real-time collaboration, and automated background processing.",
+	  	duration: formatDateRange("2025-04-01", "2025-11-01"),
+	  	responsibilities: [
+	  		"Designed and deployed secure NestJS + PostgreSQL APIs serving 5,000+ monthly counseling and scheduling requests.",
+	  		"Built real-time chat features (presence, file sharing, unread tracking, search) supporting hundreds of daily active users with sub-200ms message latency.",
+	  		"Designed background job infrastructure with prioritized queues and retry logic, automating Zoom scheduling and saving 10+ hours/week of manual coordination.",
+	  		"Integrated cloud storage, transactional email delivery, and automated PDF generation for reporting workflows.",
+	  	],
+	  },
+	  {
+	  	title: "Frontend Web Developer",
+	  	company: "Ubersnap Pte. Ltd.",
+	  	year: "October 2024 – April 2025 | Singapore (Remote)",
+	  	description:
+	  		"Delivered high-performing marketing and product experiences for a global photo platform.",
+	  	duration: formatDateRange("2024-10-01", "2025-04-10"),
+	  	responsibilities: [
+	  		"Implemented optimistic updates and client-side caching to keep complex dashboards responsive for 1,000+ daily active users.",
+	  		"Improved Lighthouse scores from the 70s to 90+, contributing to a 15% increase in organic traffic.",
+	  		"Increased engagement by 25% through targeted UI performance improvements and streamlined user flows.",
+	  		"Expanded automated test coverage, reducing post-release bugs by 30% and improving long-term stability.",
+	  	],
+	  },
+	  {
+	  	title: "Frontend Developer (Web & Mobile)",
+	  	company: "PT. Healstation Indonesia",
+	  	year: "April 2023 – October 2024 | Jakarta, Indonesia (Hybrid)",
+	  	description:
+	  		"Built and maintained healthcare, POS, and CMS applications across web and mobile platforms.",
+	  	duration: formatDateRange("2023-04-01", "2024-10-01"),
+	  	responsibilities: [
+	  		"Delivered 7+ production applications serving 5,000+ end users across healthcare and retail domains.",
+	  		"Built shared React and React Native component systems, reducing duplicate logic by 40% and accelerating feature delivery.",
+	  		"Implemented real-time updates that reduced POS order delays by 60% and improved operational efficiency.",
+	  		"Maintained high cross-device and browser compatibility to ensure consistent user experiences.",
+	  	],
+	  },
 	],
 	educations: [
 		{

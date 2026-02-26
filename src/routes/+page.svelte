@@ -1,15 +1,17 @@
 <script lang="ts">
-  import '$lib/styles/app.css';
-
-  import Hero from '$components/Hero.svelte';
-  import Technologies from '$components/Technologies.svelte';
-  import Projects from '$components/Projects.svelte';
-  import Experiences from '$components/Experiences.svelte';
-  import Educations from '$components/Educations.svelte';
+    import Hero from '$components/Hero.svelte';
+    import Skills from '$components/Skills.svelte';
+    import Projects from '$components/Projects.svelte';
+    import Experience from '$components/Experience.svelte';
+    import Education from '$components/Education.svelte';
+    import About from '$components/About.svelte';
 </script>
 
-<Hero/>
-<Technologies/>
-<Projects/>
-<Experiences/>
-<Educations/>
+<main class="w-full">
+    <Hero />
+    <Skills />
+    <Projects />
+    <Experience />
+    <Education />
+    <About />
+</main>

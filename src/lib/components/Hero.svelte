@@ -1,50 +1,15 @@
 <script lang="ts">
-  import config from "$lib/config";
-  import GradualSpacing from "$lib/ui/GradualSpacing.svelte";
-  import BlurInText from "$lib/ui/BlurInText.svelte";
-
-  let expanded = false;
-  const about = config.about.trim();
+    import config from '$lib/config';
+    import heroImage from '$assets/images/hero.webp';
 </script>
 
-<section id="hero" class="relative mt-40 md:mt-56">
-  <div class="relative flex flex-col items-start gap-y-4">
-    <div class="pill">
-      Based in {config.location}
-    </div>
-
-    <h1 class="leading-tight">
-      <GradualSpacing
-        words={`Hi, I am ${config.name}`}
-        class="text-[var(--text-hero)] font-bold gradient-text"
-      />
+<section class="max-w-5xl mx-auto px-6 pt-12 pb-24 text-center">
+    <p class="text-surface-600-400 mb-4">Hello, I am <span class="italic font-medium text-surface-950 dark:text-surface-50">{config.name}</span></p>
+    <h1 class="h1 max-w-3xl mx-auto">
+        I Build Production Systems That Are <span class="text-primary-500">Reliable</span> & <span class="text-primary-500">Fast</span>
     </h1>
-
-    <h2 class="text-subtle text-[clamp(1.1rem,2.4vw,1.4rem)]">
-      <GradualSpacing
-        words={`${config.profession}`}
-        class="font-semibold"
-      />
-    </h2>
-
-    <div class="text-gray-400 max-w-full md:max-w-2xl">
-      <BlurInText
-        word={about}
-        class={`text-sm sm:text-base transition-[max-height] duration-300 ease-in-out ${
-          expanded
-            ? ''
-            : '[display:-webkit-box] [-webkit-line-clamp:4] [-webkit-box-orient:vertical] overflow-hidden'
-        }`}
-      />
+    
+    <div class="mt-16 flex justify-center w-full max-w-2xl mx-auto opacity-90">
+        <img src={heroImage} alt="Hero" class="w-full h-auto max-h-64 object-contain" />
     </div>
-
-    <div class="mt-2 flex flex-wrap items-center gap-3">
-      <a
-        href={`mailto:${config.contactEmail}`}
-        class="btn-base btn-ghost focus-ring"
-      >
-        Contact me
-      </a>
-    </div>
-  </div>
 </section>
