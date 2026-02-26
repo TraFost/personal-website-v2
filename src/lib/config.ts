@@ -1,44 +1,271 @@
+import { formatDateRange } from "./utils";
+
+import marmaladeImg from "../assets/showcase/marmalade.webp";
+import loloImg from "../assets/showcase/lolo.webp";
+import orchestorImg from "../assets/showcase/orchestor.webp";
+import recessImg from "../assets/showcase/recess.webp";
+import poopoovilleImg from "../assets/showcase/poopooville.webp";
+import bimTranslatorImg from "../assets/showcase/bim-translator.webp";
+import ruangdiriImg from "../assets/showcase/ruangdiri.webp";
+
 export default {
-  name: 'Burak',
-  about: 'A student and a developer from Turkey specialized in web development',
-  profession: 'Full Stack Developer',
-  contactEmail: 'contact@buraky.dev',
-  meta: {
-    title: 'Burak',
-    description: 'My personal website including my projects and skills',
-    favicon: 'https://avatars.githubusercontent.com/u/59135244?size=64'
-  },
-  social: {
-    github: 'BurakYs',
-    discord: '269677849810698249'
-  },
-  projects: [
-    {
-      title: 'VidGet',
-      description: 'Multi-platform video and audio downloader',
-      thumbnail: 'https://cdn.buraky.dev/banners/vidget.png',
-      url: 'https://vidget.buraky.dev',
-      repository: 'https://github.com/BurakYs/VidGet',
-      tags: ['Svelte', 'TailwindCSS', 'Fastify']
-    },
-    {
-      title: 'Rookie Spitfire',
-      description: 'Fortnite account management Discord bot',
-      thumbnail: 'https://cdn.buraky.dev/banners/rookie-spitfire.png',
-      url: 'https://rookie-spitfire.xyz',
-      repository: 'https://github.com/BurakYs/rookie-spitfire.xyz',
-      tags: ['Svelte', 'Sass', 'TypeScript', 'MongoDB']
-    }
-  ],
-  // Tech icons are fetched from https://github.com/devicons/devicon
-  technologies: [
-    { name: 'TypeScript', slug: 'typescript' },
-    { name: 'Node.js', slug: 'nodejs' },
-    { name: 'MongoDB', slug: 'mongodb' },
-    { name: 'Svelte', slug: 'svelte' },
-    { name: 'React', slug: 'react' },
-    { name: 'Next.js', slug: 'nextjs' },
-    { name: 'Sass', slug: 'sass' },
-    { name: 'Tailwind', slug: 'tailwindcss' }
-  ]
+	name: "Rahman Nurudin",
+	about: `I build end-to-end production web applications, from user-facing interfaces to backend services and database design. My work spans scalable APIs, real-time features, background processing, and AI-powered workflows. I focus on writing clean, maintainable code and delivering systems that remain reliable under real-world use.`,
+	location: "Tangerang, Indonesia",
+	profession: "Full Stack Engineer",
+	contactEmail: "rahmannurudin29@gmail.com",
+	meta: {
+	  title: "Rahman Nurudin | Fullstack Engineer",
+	  description:
+	  	"Fullstack Engineer building production web applications and AI-integrated systems with React, TypeScript, Node.js, and PostgreSQL.",
+	  favicon: "https://avatars.githubusercontent.com/u/93178373?size=64",
+	  image: "https://avatars.githubusercontent.com/u/93178373?size=256",
+	  url: "https://rmnnrdn.vercel.app",
+},
+	social: {
+		github: "TraFost",
+		discord: "rahman_1121",
+		instagram: "rahmannrdn",
+	},
+	projects: [
+		{
+			title: "Ruang Diri",
+			description: `Professional counseling platform with real-time chat, session automation, file uploads, and search. Modular backend supports multiple roles and B2B deployments with strict access control and real-time delivery.`,
+			thumbnail: ruangdiriImg,
+			tags: [
+				"NestJS",
+				"TypeScript",
+				"PostgreSQL",
+				"Google Cloud Run",
+				"Google Cloud Storage",
+				"Resend",
+				"Zoom API",
+				"Socket.io",
+				"Drizzle ORM",
+				"Redis",
+				"BullMQ",
+				"Ably",
+				"React",
+			],
+			isPrivate: true,
+		},
+		{
+			title: "Marmalade – Voice-First Emotional Companion",
+			description: `Real-time voice AI companion delivering safe, clinically aligned emotional support. Built a speculative execution pipeline, custom OpenAI-compatible interface, and contextual memory engine for low-latency, stateful interactions.`,
+			thumbnail: marmaladeImg,
+			tags: [
+				"React",
+				"Hono",
+				"Google Cloud Run",
+				"PostgreSQL",
+				"Text-Embedding-005",
+				"Drizzle ORM",
+				"Vertex AI",
+				"ElevenLabs",
+				"ElevenLabs Conversational Agents",
+				"Pulumi",
+				"Gemini 2.5 Flash",
+				"Gemini 2.5 Pro",
+			],
+			url: "https://devpost.com/software/marmalade-lq2rd1?ref_content=my-projects-tab&ref_feature=my_projects",
+			repository: "https://github.com/TraFost/Marmalade",
+		},
+		{
+			title: "LoLo – AI League Coach",
+			description: `Serverless AI companion converting raw LoL match data into coaching insights. Managed full-stack Turbo Monorepo, JSON-only architecture, graceful degradation, and social card generation for low-latency, reliable guidance.`,
+			thumbnail: loloImg,
+			tags: [
+				"React",
+				"TypeScript",
+				"Hono",
+				"AWS Lambda",
+				"SST",
+				"Amazon Bedrock",
+				"AWS S3",
+				"TanStack Query",
+				"Tailwind",
+				"ShadCN",
+			],
+			url: "https://devpost.com/software/helfer?ref_content=my-projects-tab&ref_feature=my_projects",
+			repository: "https://github.com/TraFost/LoLo",
+		},
+		{
+			title: "Orchestor – Agentic Social Media Scheduler",
+			description: `AI system transforming Asana tasks into validated schedules and repost suggestions. Built backend, integrated IBM watsonx Orchestrate, and ensured stable, machine-readable JSON output.`,
+			thumbnail: orchestorImg,
+			tags: [
+				"React",
+				"Hono",
+				"Cloudflare Workers",
+				"TypeScript",
+				"IBM watsonx Orchestrate",
+			],
+			url: "https://lablab.ai/event/agentic-ai-hackathon-ibm-watsonx-orchestrate/agentbunnies/orchestor",
+			repository: "https://github.com/TraFost/orchestor-be",
+		},
+		{
+			title: "Recess – Production Platform",
+			description: `Role-based production management platform for quoting, project planning, collaboration, and staged payouts. Built RLS-first PostgreSQL schemas, audit logs, multi-step approvals, and secure file uploads via Supabase Edge Functions to Wasabi.`,
+			thumbnail: recessImg,
+			tags: [
+				"React",
+				"Supabase",
+				"PostgreSQL",
+				"Edge Functions",
+				"Wasabi",
+				"RLS",
+				"Real-time Collaboration",
+			],
+			isPrivate: true,
+		},
+		{
+			title: "Poopooville – Web3 Ecosystem",
+			description: `Multi-chain dApp on Ethereum & BSC supporting NFT minting, token sales, and vesting/claim flows. Integrated wallet connections via Wagmi, Viem, and Reown AppKit, maintaining sync across frontend, backend, and on-chain state.`,
+			thumbnail: poopoovilleImg,
+			tags: [
+				"React",
+				"Vite",
+				"Ethereum",
+				"BSC",
+				"Wagmi",
+				"Viem",
+				"Reown AppKit",
+				"Web3",
+				"NFT",
+				"Token Sale",
+			],
+			isPrivate: true,
+		},
+		{
+			title: "BIMTranslator",
+			description:
+				"Hackathon project with in-browser translation of Malaysian Sign Language gestures to text, using MediaPipe hand landmarks, TensorFlow.js classification, phrase matching, and animation playback.",
+			thumbnail: bimTranslatorImg,
+			tags: [
+				"React",
+				"TypeScript",
+				"MediaPipe",
+				"TensorFlow.js",
+				"TailwindCSS",
+				"Framer Motion",
+			],
+			url: "https://bim-translator-l4md.vercel.app",
+			repository: "https://github.com/TraFost/bim-translator",
+			isPrivate: false,
+		},
+		{
+			title: "KTA Buya Pasaman Timur",
+			description:
+				"A digital membership card mobile application for the East Pasaman Buya Members. Features include event registration, digital card, and member profile management.",
+			thumbnail: "https://i.postimg.cc/QMxCQd1f/showcase-4.webp",
+			tags: ["React Native", "Typescript", "Zustand"],
+			url: "https://play.google.com/store/apps/details?id=com.bpt_app&hl=en_US&pli=1",
+			isPrivate: false,
+		},
+	],
+	technologies: [
+		{
+			name: "Typescript",
+			slug: "typescript",
+		},
+		{ name: "Javascript", slug: "javascript" },
+		{ name: "React", slug: "react" },
+		{ name: "React Native", slug: "react" },
+		{ name: "Next.js", slug: "nextjs" },
+		{ name: "NestJS", slug: "nestjs" },
+		{ name: "Node.js", slug: "nodejs" },
+		{ name: "Express", slug: "express" },
+		{ name: "PostgreSQL", slug: "postgresql" },
+		{ name: "Redis", slug: "redis" },
+		{ name: "Google Cloud", slug: "googlecloud" },
+		{
+			name: "AWS",
+			slug: "amazonwebservices",
+			extendedSlug: "amazonwebservices-original-wordmark",
+		},
+		{ name: "Docker", slug: "docker" },
+		{ name: "Firebase", slug: "firebase" },
+		{ name: "Socket.io", slug: "socketio" },
+		{ name: "Tailwind", slug: "tailwindcss" },
+		{ name: "Redux", slug: "redux" },
+		{ name: "Jest", slug: "jest", extendedSlug: "jest-plain" },
+		{ name: "Rx.js", slug: "rxjs" },
+		{ name: "Material-UI", slug: "materialui" },
+	],
+	experiences: [
+	  {
+	  	title: "Fullstack Engineer (Independent / Contract)",
+	  	company: "Recess & Poopooville",
+	  	year: "November 2025 – Present | Tangerang (Remote)",
+	  	description:
+	  		"Building production web platforms and contributing to multi-chain Web3 applications across backend, frontend, and on-chain integrations.",
+	  	duration: formatDateRange("2025-11-01", "Present"),
+	  	responsibilities: [
+	  		"Built a role-based production management platform supporting quoting, approvals, collaboration, and staged payouts.",
+	  		"Designed RLS-first PostgreSQL schemas with multi-step approval flows, audit logging, and strict role-scoped access.",
+	  		"Implemented secure file handling via Edge Functions with signed URL proxying and controlled storage access.",
+	  		"Contributed to multi-chain dApp features (Ethereum & BSC), including NFT minting, token sales, and vesting/claim flows.",
+	  		"Maintained and optimized a large React codebase synchronizing on-chain, backend, and UI state.",
+	  	],
+	  },
+	  {
+	  	title: "Fullstack Developer",
+	  	company: "PT. Wong Makmur Sejati",
+	  	year: "April 2025 – November 2025 | South Jakarta, Indonesia",
+	  	description:
+	  		"Scaled a counseling and scheduling platform with secure APIs, real-time collaboration, and automated background processing.",
+	  	duration: formatDateRange("2025-04-01", "2025-11-01"),
+	  	responsibilities: [
+	  		"Designed and deployed secure NestJS + PostgreSQL APIs serving 5,000+ monthly counseling and scheduling requests.",
+	  		"Built real-time chat features (presence, file sharing, unread tracking, search) supporting hundreds of daily active users with sub-200ms message latency.",
+	  		"Designed background job infrastructure with prioritized queues and retry logic, automating Zoom scheduling and saving 10+ hours/week of manual coordination.",
+	  		"Integrated cloud storage, transactional email delivery, and automated PDF generation for reporting workflows.",
+	  	],
+	  },
+	  {
+	  	title: "Frontend Web Developer",
+	  	company: "Ubersnap Pte. Ltd.",
+	  	year: "October 2024 – April 2025 | Singapore (Remote)",
+	  	description:
+	  		"Delivered high-performing marketing and product experiences for a global photo platform.",
+	  	duration: formatDateRange("2024-10-01", "2025-04-10"),
+	  	responsibilities: [
+	  		"Implemented optimistic updates and client-side caching to keep complex dashboards responsive for 1,000+ daily active users.",
+	  		"Improved Lighthouse scores from the 70s to 90+, contributing to a 15% increase in organic traffic.",
+	  		"Increased engagement by 25% through targeted UI performance improvements and streamlined user flows.",
+	  		"Expanded automated test coverage, reducing post-release bugs by 30% and improving long-term stability.",
+	  	],
+	  },
+	  {
+	  	title: "Frontend Developer (Web & Mobile)",
+	  	company: "PT. Healstation Indonesia",
+	  	year: "April 2023 – October 2024 | Jakarta, Indonesia (Hybrid)",
+	  	description:
+	  		"Built and maintained healthcare, POS, and CMS applications across web and mobile platforms.",
+	  	duration: formatDateRange("2023-04-01", "2024-10-01"),
+	  	responsibilities: [
+	  		"Delivered 7+ production applications serving 5,000+ end users across healthcare and retail domains.",
+	  		"Built shared React and React Native component systems, reducing duplicate logic by 40% and accelerating feature delivery.",
+	  		"Implemented real-time updates that reduced POS order delays by 60% and improved operational efficiency.",
+	  		"Maintained high cross-device and browser compatibility to ensure consistent user experiences.",
+	  	],
+	  },
+	],
+	educations: [
+		{
+			title: "B.Sc. Informatics Engineering (GPA 3.70/4.0)",
+			school: "Universitas Muhammadiyah Tangerang",
+			year: "2021 - 2025",
+		},
+		{
+			title: "English First (EF)",
+			school: "EF",
+			year: "2024 - 2025",
+		},
+		{
+			title: "Fullstack Bootcamp Developer",
+			school: "Harisenin",
+			year: "2022 - 2023",
+		},
+	],
 };

@@ -1,25 +1,15 @@
 <script lang="ts">
-  import config from '$lib/config';
+    import config from '$lib/config';
+    import heroImage from '$assets/images/hero.webp';
 </script>
 
-<section class="mt-64 flex flex-col items-start gap-y-2">
-  <h1 class="text-3xl xs:text-4xl sm:text-5xl font-bold">
-      <span class="gradient-text">
-        Hello, I'm {config.name}
-      </span>
-    👋
-  </h1>
-  <h2 class="text-lg font-semibold text-white/60">
-    {config.profession}
-  </h2>
-  <p class="text-gray-400 max-w-2xl">
-    {config.about}
-  </p>
-
-  <a
-    href="mailto:{config.contactEmail}"
-    class="px-7 py-3 text-sm bg-white/10 hover:bg-white/20 duration-150 rounded-lg mt-1"
-  >
-    Contact Me
-  </a>
+<section class="max-w-5xl mx-auto px-6 pt-12 pb-24 text-center">
+    <p class="text-surface-600-400 mb-4">Hello, I am <span class="italic font-medium text-surface-950 dark:text-surface-50">{config.name}</span></p>
+    <h1 class="h1 max-w-3xl mx-auto">
+        I Build Production Systems That Are <span class="text-primary-500">Reliable</span> & <span class="text-primary-500">Fast</span>
+    </h1>
+    
+    <div class="mt-16 flex justify-center w-full max-w-2xl mx-auto opacity-90">
+        <img src={heroImage} alt="Hero" class="w-full h-auto max-h-64 object-contain" />
+    </div>
 </section>
