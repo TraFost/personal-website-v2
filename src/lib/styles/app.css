@@ -11,12 +11,6 @@
 
 @layer base {
 	:root {
-		--color-1: #DBDFE5;
-		--color-2: #161F3C;
-		--color-3: #5D5E65;
-		--color-4: #8297A3;
-		--color-5: #757472;
-		--color-6: #3AA4B4;
 		--space-3: 0.75rem;
 		--space-5: 1.25rem;
 		--space-7: 1.75rem;
@@ -34,11 +28,9 @@
 
 	head,
 	body {
-		@apply bg-black text-white scroll-smooth;
-	}
-
-	body {
-		@apply antialiased;
+		@apply bg-surface-50 dark:bg-surface-900 text-surface-950 dark:text-surface-50 scroll-smooth;
+		font-family: 'Inter', sans-serif;
+		-webkit-font-smoothing: antialiased;
 	}
 
 	main {
