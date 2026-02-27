@@ -23,7 +23,7 @@
 
         <div class="flex flex-col gap-6">
             <h3 class="h3">
-                Hi I'm <span class="italic font-medium text-surface-600 dark:text-surface-300">{config.name}</span>, {config.profession.toLowerCase()}.
+                Hi I'm <span class="italic font-medium text-primary-500 dark:text-surface-300">{config.name}</span>, {config.profession.toLowerCase()}.
             </h3>
             <div class="space-y-4 text-base md:text-lg text-surface-600 dark:text-surface-300 leading-relaxed">
                 <p>
