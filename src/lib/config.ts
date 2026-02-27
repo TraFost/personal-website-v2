@@ -21,6 +21,10 @@ export default {
 		favicon: "https://avatars.githubusercontent.com/u/93178373?size=64",
 		image: "https://avatars.githubusercontent.com/u/93178373?size=256",
 		url: "https://rmnnrdn.vercel.app",
+		// optional extras useful for SEO
+		keywords:
+			"full stack engineer, web developer, TypeScript, React, Node.js, PostgreSQL",
+		language: "en-US",
 	},
 	social: {
 		github: "TraFost",
