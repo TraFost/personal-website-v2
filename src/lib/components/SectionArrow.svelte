@@ -10,7 +10,7 @@
     } = $props<{ class?: string, arrowId: number }>();
 
     const arrows = [section1, section2, section3, section4];
-    const currentArrow = arrows[(arrowId - 1) % arrows.length];
+    const currentArrow = $derived(arrows[(arrowId - 1) % arrows.length]);
 </script>
 
 <img src={currentArrow} alt="" class={className} aria-hidden="true" />

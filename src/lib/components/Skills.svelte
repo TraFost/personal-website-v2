@@ -36,7 +36,7 @@
         </div>
         {#each config.technologies as tech}
             <div class="badge preset-filled-surface-500 shadow-sm hover:border-primary-500 transition-colors border border-surface-200 dark:border-surface-700 flex items-center gap-2 bg-white text-black">
-                <img src={getIconUrl(tech.slug)} alt="{tech.name} icon" class="w-4 h-4 object-contain" loading="lazy" />
+                <img src={getIconUrl(tech.slug, tech.extendedSlug)} alt="{tech.name} icon" class="w-4 h-4 object-contain" loading="lazy" />
                 {tech.name}
             </div>
         {/each}
