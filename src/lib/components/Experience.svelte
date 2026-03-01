@@ -57,7 +57,7 @@
                             <p class="text-lg font-medium text-surface-600 dark:text-surface-400 mt-1">{exp.title}</p>
                         </div>
                         
-                        <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-surface-100/80 dark:bg-surface-800/80 backdrop-blur-sm text-surface-600 dark:text-surface-300 text-sm font-semibold rounded-full ring-1 ring-surface-200 dark:ring-surface-700 whitespace-nowrap self-start">
+                        <div class="inline-flex items-center gap-2 px-2 py-1.5 sm:px-3 sm:py-1.5 bg-surface-100/80 dark:bg-surface-800/80 backdrop-blur-sm text-surface-600 dark:text-surface-300 text-[10px] sm:text-sm font-semibold rounded-full ring-1 ring-surface-200 dark:ring-surface-700 whitespace-normal sm:whitespace-nowrap self-start">
                             <iconify-icon icon="solar:calendar-linear" width="16" height="16" style="stroke-width: 1.5;"></iconify-icon>
                             {exp.year}
                         </div>

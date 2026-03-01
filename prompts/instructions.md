@@ -1,40 +1,85 @@
-# Personal Website v2 - Implementation Instructions
+# Personal Website v2 – Implementation Instructions
 
-This document outlines the current implementation architecture and conventions of the `personal-website-v2` codebase, intended as a reference for AI assistants and developers.
+This document describes the structure, conventions, and patterns currently used in the
+`personal-website-v2` repository. It is primarily written for **AI coding agents** but may
+also serve as a quick reference for human developers.
 
-## Tech Stack
-- **Framework**: Svelte 5 (with SvelteKit)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS v4
-- **UI Library**: Skeleton UI v4 (`@skeletonlabs/skeleton` & `@skeletonlabs/skeleton-svelte` powered by Zag.js)
-- **Icons**: Iconify (`<iconify-icon>` web component), primarily using the `solar` icon set.
-- **Animations**: `svelte/motion` (`spring`), `svelte/transition` (`fly`), and Tailwind CSS utility classes.
+---
 
-## Codebase Structure
-- `src/lib/config.ts`: The central data store. Contains all profile information, skills, projects, experience, and education data. Always update this file to modify content without touching UI code.
-- `src/routes/+page.svelte`: The main entry point for the single-page application. Composes the various sections.
-- `src/lib/components/`: Contains the individual section components for the landing page:
-  - `Hero.svelte`
-  - `About.svelte` (`id="about"`)
-  - `Skills.svelte` (`id="skills"`)
-  - `Projects.svelte` (`id="projects"`)
-  - `Experience.svelte` (`id="experience"`)
-  - `Education.svelte` (`id="education"`)
-- `src/lib/ui/`: Contains higher-level layout UI components like `NavigationBar.svelte`.
+## 🧱 Tech Stack Overview
 
-## Core Conventions & Patterns
-1. **Svelte 5 API**: The project uses modern Svelte 5 syntax. Use runes (`$state`, `$props`, `$derived`) when working with reactivity within components.
-2. **Skeleton UI v4 Patterns**:
-   - Skeleton components must be imported from `@skeletonlabs/skeleton-svelte`. 
-   - Many Skeleton components utilize a "composed" pattern (e.g. `<Dialog>` containing `<Dialog.Trigger>`, `<Dialog.Positioner>`, `<Dialog.Content>`).
-   - Use Skeleton preset utility classes (`preset-tonal`, `preset-filled`, `card`, `badge`, `bg-surface-50-950`, etc.) when adding new UI elements to ensure they conform to the existing theme and dark mode settings.
-3. **Icons**: Use the custom HTML element `<iconify-icon icon="solar:..." width="24" height="24"></iconify-icon>`. Do not import SVG components unless necessary.
-4. **Dark Mode**: Fully supported using Tailwind's `dark:` classes and Skeleton UI's CSS custom properties. Always ensure any custom colors have a `dark:` equivalent.
-5. **Animations**: 
-   - Interactive elements (like cards) heavily use `use:springyCard` custom actions leveraging `svelte/motion` springs for hover effects. 
-   - Initial load animations are handled with Svelte's `fly` transition on mounting.
-   - For UI component state transitions (like modals/drawers), use CSS `transition transition-discrete` coupled with Tailwind data-state styling (`data-[state=open]:...`).
+- **Framework**: Svelte 5 with SvelteKit (latest conventions, runes-based reactivity).
+- **Language**: TypeScript throughout.
+- **Styling**: Tailwind CSS v4, augmented by Skeleton UI utilities.
+- **UI Library**: Skeleton UI v4 (`@skeletonlabs/skeleton-svelte` + Zag.js patterns).
+- **Icons**: `<iconify-icon>` component (Solar icon set).
+- **Animations**: `svelte/motion` (`spring`), `svelte/transition` (`fly`), Tailwind utilities.
 
-## Feature Specifics
-- **Navigation Drawer**: Implemented in `NavigationBar.svelte` using Skeleton's `<Dialog>` component. It acts as a side-drawer popping out from the right side (`justify-end`, `translate-x-full`). It utilizes internal state (`let drawerOpen = $state(false);`) to manually close the drawer whenever an anchor link is clicked.
-- **Anchors & Scrolling**: Navigation within the single-page site operates via `#id` anchor links. Each component in `src/lib/components` has an explicit `id` tag to support this integration.
+---
+
+## 📁 Project Layout
+
+```
+src/
+ ├─ lib/
+ │   ├─ config.ts            ← central data store (name, bio, projects, sections, etc.)
+ │   ├─ components/          ← page sections (Hero, About, Skills, Projects, Experience, Education)
+ │   ├─ ui/                  ← shared layout pieces (NavigationBar, possibly future bits)
+ │   └─ styles/              ← global CSS files (app.css, theme.css)
+ ├─ routes/
+ │   ├─ +page.svelte         ← assembles every section into the single‑page layout
+ │   ├─ +layout.svelte       ← global layout / providers (if used)
+ │   ├─ sitemap.xml/+server  ← sitemap generation
+ │   └─ robots.txt/+server   ← robots rules
+```
+
+> **config.ts** is the _only_ file you edit to update profile, skills, projects, experience,
+> or education content. Components read from it and render accordingly.
+
+---
+
+## ⚙ Core Conventions
+
+1. **Svelte 5 & Reactivity** – always use runes (`$state`, `$props`, `$derived`, `$effect`) and
+   avoid deprecated v4 syntax (`$:` etc.).
+2. **Skeleton UI Patterns**
+   - Import exclusively from `@skeletonlabs/skeleton-svelte`.
+   - Leverage the composed component pattern (e.g. `<Dialog>` owns `<Dialog.Trigger>`,
+     `<Dialog.Content>`, etc.).
+   - Use preset utility classes (`preset-tonal`, `card`, `badge`, `bg-surface-50-950`, …) to
+     respect the theme and dark mode automatically.
+3. **Icons** – always use `<iconify-icon icon="solar:..." ...>`; don’t paste raw SVGs.
+4. **Color usage** – never hard‑code arbitrary color values. Use the theme variables defined
+   in `src/lib/styles/theme.css` (under `data-theme='custom'`) or canonical Tailwind/Skeleton
+   utility classes. This keeps colors consistent and automatically respects dark mode.
+5. **Dark mode** – apply `dark:` variants or Skeleton custom properties; ensure every custom
+   color has a dark equivalent.
+6. **Animations & Interactions**
+   - Hover/interactive cards use `use:springyCard` action defined in each section.
+   - Content entrance animations use `fly` with staggered delays.
+   - Modal/drawer state transitions rely on `transition transition-discrete` +
+     `data-[state=open]:…` utilities.
+
+---
+
+## 🏗 Feature Notes
+
+- **NavigationBar & Drawer**
+  - Built with Skeleton `<Dialog>`; triggered by hamburger menu.
+  - Drawer is a right-aligned side panel (`justify-end translate-x-full`).
+  - Links close the drawer via `onclick={() => drawerOpen = false}` so routing works.
+- **Anchored Scrolling**
+  - Each section component has a hard-coded `id` matching the nav link.
+  - Anchor navigation is purely `href="#about"` etc.; no router logic required.
+
+---
+
+> 📌 **Quick reminder for AI coding agents:**
+>
+> - For new or updated UI components, consult `prompts/library-rules/components.md`.
+> - For any 3D/Threlte work, read `prompts/library-rules/threlte.md` before generating code.
+
+---
+
+Feel free to refresh this document as the app evolves; it should always mirror the current
+architecture and style rules. Happy coding! 😄
