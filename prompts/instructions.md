@@ -46,8 +46,8 @@ src/
    - Import exclusively from `@skeletonlabs/skeleton-svelte`.
    - Leverage the composed component pattern (e.g. `<Dialog>` owns `<Dialog.Trigger>`,
      `<Dialog.Content>`, etc.).
-   - Use preset utility classes (`preset-tonal`, `card`, `badge`, `bg-surface-50-950`, …) to
-     respect the theme and dark mode automatically.
+   - Use preset utility classes (`preset-tonal`, `card`, `badge`, `bg-surface-50-950`, …)
+     for consistent styling.
 3. **Icons** – always use `<iconify-icon icon="solar:..." ...>`; don’t paste raw SVGs.
 4. **Color usage** – never hard‑code arbitrary color values. Use the theme variables defined
    in `src/lib/styles/theme.css` (under `data-theme='custom'`) or canonical Tailwind/Skeleton
